@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://danielsilvaengpt.github.io/portfolio/sitemap.xml

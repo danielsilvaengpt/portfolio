@@ -1,45 +1,54 @@
-Portfolio · Daniel Silva
+# Portfolio · Daniel Silva
 
-Website de portfólio profissional de Daniel Silva, Engenheiro Informático Júnior com foco em Dados e IA.
+Website de portfólio de **Daniel Silva**, Engenheiro Informático Júnior com foco em **Dados e IA**.
 
-Site: [ADICIONAR URL QUANDO PUBLICADO]
+**Site:** https://danielsilvaengpt.github.io/portfolio/
 
-Sobre o projeto
+## Sobre
 
-Este site apresenta o meu percurso, os projetos em que trabalhei e as competências que desenvolvi. O objetivo é mostrar, de forma clara, o que sei fazer na área de Dados e IA:
+Conta a minha transição do mundo físico (máquinas CNC, automação industrial) para o mundo digital (dados, IA, engenharia de dados). O fio condutor é um braço robótico em wireframe, controlado pelo scroll, que desenha um toolpath e o transforma numa rede de dados.
 
-Análise de Dados
-Engenharia de Dados e IA
-Backend em Python
-Secções
-Hero: apresentação e links principais
-Sobre mim: perfil e objetivos
-Projetos: problema, solução, stack e papel em cada um
-Experiência: estágios e percurso profissional
-Competências: linguagens, dados e IA, bases de dados, ferramentas
-Formação e prémios
-Contacto
-Projetos em destaque
-Projeto	Descrição	Stack
-IndustrIA	Perguntas e respostas sobre manuais técnicos de manutenção industrial, com arquitetura RAG	Python, FastAPI, PostgreSQL, pgvector, LLM
-BI Porto da Figueira da Foz	Data Mart em esquema Snowflake, ETL automatizado e dashboards de KPIs operacionais	Python, MySQL, CSV, Power BI
-Classificador de Doenças de Pele	Transfer Learning com MobileNetV2 e 72% de accuracy (demo)	Python, Deep Learning, Streamlit
-WaterWise Calculator	Aplicação web full-stack para calcular a pegada hídrica	PHP, MySQL, AJAX, jQuery, CSS3
-Python CNC Modelling Controller	Automação industrial para máquinas de modelação 3D	Python, GUI
-Tecnologias do site
-Frontend: [ADICIONAR: HTML/CSS/JS | React + Tailwind]
-Idiomas: [ADICIONAR: PT / EN]
-Alojamento: [ADICIONAR: GitHub Pages | Vercel | Netlify]
-Executar localmente
-bash
+## Funcionalidades
+
+- Cena 3D com Three.js controlada pelo scroll (avança e recua), com versão leve em ecrãs pequenos e qualidade adaptativa
+- Versões **PT e EN** com seletor (idioma por defeito segundo o browser)
+- Modo claro e escuro
+- Casos de estudo dos projetos, cada um com a sua cena 3D e etiquetas
+- Respeita `prefers-reduced-motion`; navegação por teclado e HTML semântico
+- Sem framework nem passo de build
+
+## Estrutura
+
+```
+portfolio/
+├── index.html
+├── css/style.css
+├── js/            (hero, sections, scene, i18n, effects)
+├── assets/
+│   ├── img/          (foto, capa do BI, imagem de partilha)
+│   └── cv/           (CV em PT e EN)
+├── favicon.svg
+├── robots.txt
+└── sitemap.xml
+```
+
+## Executar localmente
+
+O site é estático. Basta servir a pasta:
+
+```bash
 git clone https://github.com/danielsilvaengpt/portfolio.git
 cd portfolio
-# [ADICIONAR comandos conforme a stack escolhida]
-Estrutura
-portfolio/
-├── README.md
-└── [ADICIONAR estrutura de pastas]
-Contacto
-Email: danielsilva.eng.pt@gmail.com
-LinkedIn: daniel-silva-eng-pt
-GitHub: danielsilvaengpt
+python3 -m http.server 8000
+# abrir http://localhost:8000
+```
+
+## Tecnologias
+
+HTML, CSS e JavaScript simples · [Three.js](https://threejs.org/) r128 · [GSAP](https://gsap.com/) · Google Fonts (Space Grotesk, Inter, JetBrains Mono) · alojado no GitHub Pages.
+
+## Contacto
+
+- Email: danielsilva.eng.pt@gmail.com
+- LinkedIn: [daniel-silva-eng-pt](https://www.linkedin.com/in/daniel-silva-eng-pt/)
+- GitHub: [danielsilvaengpt](https://github.com/danielsilvaengpt)
