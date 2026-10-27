@@ -7,6 +7,20 @@
 
 ## Changelog
 
+### [2026-10-27 01:07] — /phase 8 — Education Section Complete
+
+**Action:** Desenvolvida a secção de Educação e Reconhecimento Académico/Profissional com divisão 7:5 (formação ISEC e Serafim Leite à esquerda; bloco dedicado à Medalha de Excelência WorldSkills Portugal 2023 à direita).
+**Files created / modified:**
+- `src/data/education.ts`: modelos tipados `EducationItem` e `AwardItem` com o percurso académico no ISEC (Licenciatura em Engenharia Informática, ramo Sistemas de Informação), diploma profissional e distinção WorldSkills.
+- `src/components/sections/Education.tsx`: grelha assimétrica com metadados cronológicos, detalhes de formação técnica e callout card de prestígio nacional sem elementos visuais bregas, respeitando a paleta monocromática elegante.
+- `src/App.tsx`: integração da nova secção `Education`.
+
+**Decisions:**
+- A Medalha de Excelência no WorldSkills recebe destaque lateral com moldura dedicada e badge de mérito nacional (`🏅 Medal of Excellence · WorldSkills Portugal 2023`), comunicando alta capacidade técnica de forma sóbria e imponente.
+
+**Status:** ✅ Complete  
+**Notes:** Phase 8 concluída e validada pelo `npm run build`.
+
 ### [2026-10-27 01:03] — /phase 7 — Skills Section Complete
 
 **Action:** Desenvolvida a secção de Competências Técnicas dividida em 4 domínios de engenharia com layout responsivo de 4 colunas em grelha, tipografia mono e zero barras de percentagem.

@@ -126,17 +126,17 @@
 
 ## Phase 8 — Education Section
 
-- [ ] `SectionLabel`: `[06] EDUCATION`
-- [ ] Two degree entries (most recent first):
-  - [ ] BSc Computer Engineering, Information Systems — ISEC (2023–2026)
-  - [ ] Technical Diploma IT Management — Escola Sec. Dr. Serafim Leite (2020–2023)
-- [ ] Each: degree name (bold) / institution (secondary) / period (mono, tertiary)
-- [ ] WorldSkills Award callout block:
-  - [ ] Border: `1px solid var(--border)`, padding `24px`
-  - [ ] `🏅 Medal of Excellence` — bold, primary
-  - [ ] `WorldSkills Portugal 2023` — mono, secondary
-  - [ ] `Mobile Application Development` — body, secondary
-- [ ] Fade-in animation on scroll
+- [x] `SectionLabel`: `[06] EDUCATION`
+- [x] Two degree entries (most recent first):
+  - [x] BSc Computer Engineering, Information Systems — ISEC (2023–2026)
+  - [x] Technical Diploma IT Management — Escola Sec. Dr. Serafim Leite (2020–2023)
+- [x] Each: degree name (bold) / institution (secondary) / period (mono, tertiary)
+- [x] WorldSkills Award callout block:
+  - [x] Border: `1px solid var(--border)`, padding `24px`
+  - [x] `🏅 Medal of Excellence` — bold, primary
+  - [x] `WorldSkills Portugal 2023` — mono, secondary
+  - [x] `Mobile Application Development` — body, secondary
+- [x] Fade-in animation on scroll
 
 ---
 
