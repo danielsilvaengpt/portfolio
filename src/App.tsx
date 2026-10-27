@@ -4,6 +4,7 @@ import { Navbar } from './components/layout/Navbar'
 import { Hero } from './components/sections/Hero'
 import { About } from './components/sections/About'
 import { Experience } from './components/sections/Experience'
+import { Projects } from './components/sections/Projects'
 import { SectionLabel } from './components/ui/SectionLabel'
 import { Tag } from './components/ui/Tag'
 import { Mail } from 'lucide-react'
@@ -45,25 +46,8 @@ function PortfolioContent() {
       {/* Experience Section */}
       <Experience />
 
-      <section id="projects" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
-        <SectionLabel index="03" label={lang === 'pt' ? 'Projetos' : 'Projects'} />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-6 border border-border rounded-lg bg-bg-subtle hover:border-border-hover transition-colors">
-            <span className="font-mono text-xs text-text-tertiary">AI · RAG</span>
-            <h3 className="font-bold text-lg mt-1 mb-2">IndustrIA</h3>
-            <p className="text-text-secondary text-xs font-mono">
-              Q&A com RAG para manuais de manutenção industrial.
-            </p>
-          </div>
-          <div className="p-6 border border-border rounded-lg bg-bg-subtle hover:border-border-hover transition-colors">
-            <span className="font-mono text-xs text-text-tertiary">Deep Learning</span>
-            <h3 className="font-bold text-lg mt-1 mb-2">DermoScan AI</h3>
-            <p className="text-text-secondary text-xs font-mono">
-              Classificação de lesões de pele com MobileNetV2 e Streamlit.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Projects Section */}
+      <Projects />
 
       <section id="skills" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
         <SectionLabel index="04" label="Skills" />
