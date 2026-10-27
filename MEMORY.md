@@ -1,5 +1,60 @@
 # MEMORY.md — Daniel Silva: Complete Portfolio Content
 
+> ⚠️ Este ficheiro é a memória persistente do projeto. **Nunca apagar o changelog.**  
+> Cada comando (`/phase`, `/problem`, `/new`, `/deploy`) grava aqui automaticamente.
+
+---
+
+## Changelog
+
+### [2026-10-27 00:38] — /phase 0 — Project Setup Complete
+
+**Action:** Inicializado o projeto React 19 + TypeScript + Vite 8. Instaladas e configuradas as dependências de base, styling e animação.
+**Files created / modified:**
+- `package.json`: dependências adicionadas (`tailwindcss`, `postcss`, `autoprefixer`, `gh-pages`, `framer-motion`, `lucide-react`, `@fontsource/inter`, `@fontsource/jetbrains-mono`, `react-intersection-observer`, `clsx`, `tailwind-merge`) e scripts configurados (`deploy`, `build`)
+- `vite.config.ts`: configurado `base: '/portfolio/'` para GitHub Pages
+- `tailwind.config.ts`: estendido com as CSS variables do design system (`bg`, `border`, `text`, `accent`), fontes `Inter` e `JetBrains Mono`
+- `src/styles/globals.css`: tokens CSS custom properties para dark e light mode importando as fontes
+- `src/lib/utils.ts`: helper `cn()` com `clsx` e `tailwind-merge`
+- Diretórios criados: `src/components/layout`, `src/components/sections`, `src/components/ui`, `src/data`, `src/hooks`, `src/styles`, `src/locales`, `src/lib`, `public/assets/cv`, `public/assets/img`
+- Git inicializado com remote `https://github.com/danielsilvaengpt/portfolio.git` e commit inicial realizado
+
+**Decisions:**
+- Usou-se Tailwind CSS com CSS custom properties para garantir alternância instantânea entre temas dark/light sem flashes.
+- Fontes auto-hospedadas via `@fontsource` para 0 round-trips externos e máxima performance.
+- Testado `npm run build` com sucesso absoluto (saída limpa na pasta `dist/`).
+
+**Status:** ✅ Complete  
+**Notes:** Phase 0 totalmente concluída. Pronto para Phase 1 (Design Tokens & Base Components).
+
+### [2026-10-27 00:28] — SETUP — Context files created
+
+**Action:** Criados todos os ficheiros de contexto para o novo portfolio. Extraídos dados do portfolio antigo via GitHub raw HTML.  
+**Files created:**
+- `CLAUDE.md` — tech stack, estrutura, comandos, regras
+- `MEMORY.md` — dados pessoais completos (este ficheiro)
+- `DESIGN.md` — design system completo (paleta, tipografia, animações, blueprints)
+- `TASKS.md` — 80+ tasks em 14 fases
+- `ARCHITECTURE.md` — árvore de componentes, estado, i18n, deploy
+- `MOODBOARD.md` — brief criativo, referências visuais, filosofia
+- `COMMANDS.md` — referência dos slash commands
+- `Portfolio/.agents/skills/portfolio-commands/SKILL.md` — skill ativo para /phase, /problem, /new, /deploy  
+
+**Decisions:**
+- Stack: React 18 + Vite + TailwindCSS + Framer Motion
+- Tema: Dark/Light toggle, default dark
+- Cor de destaque: Monocromático (branco/prata) — sem cor de destaque colorida
+- Secções: Hero, About, Experience, Projects, Skills, Education, Contact
+- Fonte: Geist/Inter + Geist Mono/JetBrains Mono
+- Deploy: GitHub Pages (`/portfolio/` base path)
+
+**Status:** ✅ Complete — Pronto para começar a implementação  
+**Notes:** Portfolio antigo em https://danielsilvaengpt.github.io/portfolio/ — consultar apenas para CONTEÚDO, nunca para design. A pasta local `c:\Users\danie\Desktop\Portfolio` está vazia — é o workspace do projeto novo.
+
+---
+
+
+
 > Single source of truth for all personal content. All text is bilingual (PT/EN). Do NOT invent data — use only what is here.
 
 ---

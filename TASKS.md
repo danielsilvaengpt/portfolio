@@ -7,19 +7,19 @@
 
 ## Phase 0 — Project Setup
 
-- [ ] `npm create vite@latest portfolio -- --template react-ts`
-- [ ] Install TailwindCSS v3 + postcss + autoprefixer
-- [ ] Install Framer Motion
-- [ ] Install Lucide React (icons)
-- [ ] Install `@fontsource/inter` + `@fontsource/jetbrains-mono`
-- [ ] Install `react-intersection-observer`
-- [ ] Configure `tailwind.config.ts` with custom tokens (colors, fonts, spacing)
-- [ ] Setup `globals.css` with CSS custom properties (dark/light vars)
-- [ ] Configure `vite.config.ts` (base path for GitHub Pages: `/portfolio/`)
-- [ ] Add `gh-pages` package + `npm run deploy` script in `package.json`
-- [ ] Create folder structure: `components/`, `data/`, `hooks/`, `styles/`, `locales/`
-- [ ] Add `.gitignore`, connect to GitHub repo
-- [ ] Verify dev server runs: `npm run dev` → localhost
+- [x] `npm create vite@latest portfolio -- --template react-ts`
+- [x] Install TailwindCSS v3 + postcss + autoprefixer
+- [x] Install Framer Motion
+- [x] Install Lucide React (icons)
+- [x] Install `@fontsource/inter` + `@fontsource/jetbrains-mono`
+- [x] Install `react-intersection-observer`
+- [x] Configure `tailwind.config.ts` with custom tokens (colors, fonts, spacing)
+- [x] Setup `globals.css` with CSS custom properties (dark/light vars)
+- [x] Configure `vite.config.ts` (base path for GitHub Pages: `/portfolio/`)
+- [x] Add `gh-pages` package + `npm run deploy` script in `package.json`
+- [x] Create folder structure: `components/`, `data/`, `hooks/`, `styles/`, `locales/`
+- [x] Add `.gitignore`, connect to GitHub repo
+- [x] Verify dev server runs: `npm run dev` → localhost
 
 ---
 
