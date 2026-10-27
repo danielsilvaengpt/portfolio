@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "DANIEL SILVA — PORTFOLIO 2026",
+    "name": "Daniel Silva",
+    "role": "Junior Computer Engineer — AI & Data Analysis",
+    "tagline": "“From metal to data.”",
+    "downloadCv": "Download CV",
+    "exploreWork": "Explore Work",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "title": "About",
+    "pullQuote": "From mechanical precision work with CNC machines to the universe of Artificial Intelligence and Data Engineering.",
+    "p1": "I completed my Degree in Computer Engineering at ISEC (Information Systems branch). Throughout my journey, I completed 4 professional internships — including an international Erasmus+ experience in Spain — and was awarded the Medal of Excellence in Mobile Application Development at WorldSkills Portugal 2023.",
+    "p2": "My background in industrial environments taught me the value of rigor and systematic thinking. Today, I channel that discipline into RAG architectures, data pipelines, analytical modeling, and robust backend development in Python.",
+    "factoids": {
+      "location": "Aveiro, Portugal",
+      "status": "Open to work / Available",
+      "degree": "BSc Computer Engineering · ISEC",
+      "honor": "Medal of Excellence · WorldSkills 2023",
+      "languages": "Portuguese (Native) · English"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "status": "Available for immediate hire / new challenges",
+    "directLine": "DIRECT LINE // EMAIL",
+    "copy": "Copy",
+    "copied": "Copied",
+    "locationNote": "Available on-site, hybrid, or remote globally"
+  },
+  "footer": {
+    "credit": "Engineered with typographic discipline by Daniel Silva · 2026",
+    "backToTop": "Back to top"
+  }
+}

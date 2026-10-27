@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "skills": "Skills",
+    "education": "Educação",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "DANIEL SILVA — PORTFOLIO 2026",
+    "name": "Daniel Silva",
+    "role": "Engenheiro Informático Júnior — IA & Análise de Dados",
+    "tagline": "“Do metal aos dados.”",
+    "downloadCv": "Descarregar CV",
+    "exploreWork": "Ver Percurso",
+    "scrollDown": "Rolar para baixo"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "pullQuote": "Do trabalho de precisão mecânica com máquinas CNC ao universo da Inteligência Artificial e Engenharia de Dados.",
+    "p1": "Concluí a Licenciatura em Engenharia Informática no ISEC (ramo de Sistemas de Informação). Ao longo do meu percurso, passei por 4 estágios profissionais — incluindo uma experiência internacional Erasmus+ em Espanha — e conquistei a Medalha de Excelência em Desenvolvimento de Aplicações Móveis no WorldSkills Portugal 2023.",
+    "p2": "A minha experiência inicial em ambientes industriais ensinou-me o valor do rigor e do pensamento sistemático. Hoje foco essa capacidade em arquiteturas RAG, pipelines de dados, modelação analítica e desenvolvimento backend robusto em Python.",
+    "factoids": {
+      "location": "Aveiro, Portugal",
+      "status": "Disponível para novos desafios",
+      "degree": "Licenciatura Engenharia Informática · ISEC",
+      "honor": "Medalha de Excelência · WorldSkills 2023",
+      "languages": "Português (Nativo) · Inglês"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "status": "Disponível para novos desafios profissionais",
+    "directLine": "CANAL DIRETO // EMAIL",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "locationNote": "Disponibilidade presencial, híbrida ou 100% remota"
+  },
+  "footer": {
+    "credit": "Concebido com rigor tipográfico por Daniel Silva · 2026",
+    "backToTop": "Topo"
+  }
+}
