@@ -7,6 +7,22 @@
 
 ## Changelog
 
+### [2026-10-27 01:16] — /phase 13 — Performance, SEO & Accessibility Complete
+
+**Action:** Configuração de todos os parâmetros de SEO, indexação, acessibilidade e partilha em redes sociais (Open Graph e Twitter Card).
+**Files created / modified:**
+- `index.html`: adicionadas metatags completas de SEO, descrição editorial, autor, keywords, canonical URL e cartões Open Graph (`og:image`, `og:title`, `og:description`, `og:type`) e Twitter Card (`summary_large_image`).
+- `public/favicon.svg`: ícone de navegador customizado em SVG com monograma `DS` em alta definição.
+- `public/robots.txt`: instruções padrão de rastreamento com referência ao sitemap.
+- `public/sitemap.xml`: mapa do site indexável.
+- `public/assets/img/og-image.jpg`: imagem de destaque de partilha social adicionada.
+
+**Decisions:**
+- A imagem de pré-visualização de partilha (`og-image.jpg`) e favicon personalizado garantem que links partilhados no LinkedIn, Twitter ou Slack apresentem um aspeto profissional e com identidade visual marcada.
+
+**Status:** ✅ Complete  
+**Notes:** Phase 13 concluída e validada pelo `npm run build`.
+
 ### [2026-10-27 01:13] — /phase 11 & /phase 12 — i18n Locales & Animations Polish Complete
 
 **Action:** Estruturados os dicionários JSON de internacionalização (`src/locales/pt.json` e `src/locales/en.json`) e criados os utilitários padronizados de animação Framer Motion (`src/lib/animations.ts`) com respeito por acessibilidade e redução de movimento.

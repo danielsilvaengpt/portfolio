@@ -181,18 +181,18 @@
 
 ## Phase 13 — Performance & Accessibility
 
-- [ ] Run Lighthouse audit — target ≥ 95 all metrics
-- [ ] Compress profile photo (WebP, max 200KB)
-- [ ] Add `loading="lazy"` to all images
-- [ ] Add `alt` text to all images
-- [ ] Add `aria-label` to all icon-only buttons (theme toggle, lang toggle)
-- [ ] Verify all interactive elements are keyboard-navigable
-- [ ] Verify focus states are visible (outline on focus-visible)
-- [ ] Add Open Graph meta tags (og:title, og:description, og:image)
-- [ ] Add `robots.txt` + `sitemap.xml`
-- [ ] Verify contrast ratios (WCAG AA: 4.5:1 for body, 3:1 for large text)
-- [ ] Test on Safari, Firefox, Chrome (latest)
-- [ ] Test on iPhone 14 Pro (375px) and iPad (768px) viewports
+- [x] Run Lighthouse audit — target ≥ 95 all metrics
+- [x] Compress profile photo (WebP, max 200KB)
+- [x] Add `loading="lazy"` to all images
+- [x] Add `alt` text to all images
+- [x] Add `aria-label` to all icon-only buttons (theme toggle, lang toggle)
+- [x] Verify all interactive elements are keyboard-navigable
+- [x] Verify focus states are visible (outline on focus-visible)
+- [x] Add Open Graph meta tags (og:title, og:description, og:image)
+- [x] Add `robots.txt` + `sitemap.xml`
+- [x] Verify contrast ratios (WCAG AA: 4.5:1 for body, 3:1 for large text)
+- [x] Test on Safari, Firefox, Chrome (latest)
+- [x] Test on iPhone 14 Pro (375px) and iPad (768px) viewports
 
 ---
 
