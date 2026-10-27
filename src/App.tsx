@@ -3,6 +3,7 @@ import { I18nProvider, useI18n } from './hooks/useI18n'
 import { Navbar } from './components/layout/Navbar'
 import { Hero } from './components/sections/Hero'
 import { About } from './components/sections/About'
+import { Experience } from './components/sections/Experience'
 import { SectionLabel } from './components/ui/SectionLabel'
 import { Tag } from './components/ui/Tag'
 import { Mail } from 'lucide-react'
@@ -41,16 +42,8 @@ function PortfolioContent() {
       {/* About Section */}
       <About />
 
-      {/* Sections Preview / Stubs for later phases */}
-
-      <section id="experience" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
-        <SectionLabel index="02" label={lang === 'pt' ? 'Experiência' : 'Experience'} />
-        <div className="flex flex-wrap gap-2">
-          <Tag>Meight (AI Engineer)</Tag>
-          <Tag>Internet Web Solutions (Full-Stack · Erasmus+)</Tag>
-          <Tag>OPTIMA (CNC & Python Automation)</Tag>
-        </div>
-      </section>
+      {/* Experience Section */}
+      <Experience />
 
       <section id="projects" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
         <SectionLabel index="03" label={lang === 'pt' ? 'Projetos' : 'Projects'} />
