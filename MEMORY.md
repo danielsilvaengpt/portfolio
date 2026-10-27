@@ -7,6 +7,23 @@
 
 ## Changelog
 
+### [2026-10-27 01:23] — CINEMATIC UPGRADE — Continuous 3D Synaptic Thread & Agent HUD
+
+**Action:** Implementada a experiência cinemática interativa tridimensional contínua em Three.js WebGL e o console holográfico em tempo real "Agent Thought Stream".
+**Files created / modified:**
+- `package.json`: adicionado `three` e `@types/three`.
+- `src/components/ui/SynapticCanvas.tsx`: motor 3D de alta performance WebGL (`PerspectiveCamera`, `CatmullRomCurve3` spline tridimensional com mais de 300 pontos de interpolação, 180 pulsos de luz sinápticos dinâmicos que viajam pela espinha dorsal do site, e núcleo esférico nodal no Hero que responde matematicamente à rotação temporal, ao scroll da página e à atração do cursor do rato).
+- `src/components/ui/AgentThoughtStream.tsx`: HUD em tempo real simula o ciclo OODA de agentes autónomos com telemetria de latência (`12ms`), orquestrador de tarefas, injeção de contexto RAG e estado operacional de nós.
+- `src/components/sections/Hero.tsx`: integrado o novo HUD e tipografia técnica de sistemas autónomos de IA.
+- `src/App.tsx`: o `SynapticCanvas` foi renderizado como background unificado e contínuo da raiz ao rodapé.
+
+**Decisions:**
+- A linha spline tridimensional percorre a profundidade Z e altura Y da página inteira, reagindo suavemente à rolagem vertical do utilizador com amortecimento inercial (`dampening`).
+- Paleta monocromática preservada com brilho aditivo no dark mode e sombreamento suave no light mode.
+
+**Status:** ✅ Complete  
+**Notes:** Validado por `npm run build` com sucesso absoluto.
+
 ### [2026-10-27 01:16] — /phase 13 — Performance, SEO & Accessibility Complete
 
 **Action:** Configuração de todos os parâmetros de SEO, indexação, acessibilidade e partilha em redes sociais (Open Graph e Twitter Card).
