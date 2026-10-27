@@ -1,0 +1,200 @@
+# MEMORY.md — Daniel Silva: Complete Portfolio Content
+
+> Single source of truth for all personal content. All text is bilingual (PT/EN). Do NOT invent data — use only what is here.
+
+---
+
+## 👤 Identity
+
+| Field | Value |
+|---|---|
+| **Name** | Daniel Silva |
+| **Location** | Aveiro, Portugal 🇵🇹 |
+| **Role (PT)** | Engenheiro Informático Júnior — IA & Análise de Dados |
+| **Role (EN)** | Junior Computer Engineer — AI & Data Analysis |
+| **Tagline (PT)** | "Do metal aos dados." |
+| **Tagline (EN)** | "From metal to data." |
+| **Email** | danielsilva.eng.pt@gmail.com |
+| **LinkedIn** | https://www.linkedin.com/in/daniel-silva-eng-pt/ |
+| **GitHub** | https://github.com/danielsilvaengpt |
+| **CV (PT)** | /assets/cv/Daniel_Silva_CV_PT.pdf |
+| **CV (EN)** | /assets/cv/Daniel_Silva_CV_EN.pdf |
+| **Profile photo** | /assets/img/daniel.jpg |
+
+---
+
+## 📝 Bio / About Me
+
+### PT
+> "Terminei Engenharia Informática no ISEC, no ramo de Sistemas de Informação. Passei por quatro estágios, um deles em Espanha com o Erasmus+, e ganhei a Medalha de Excelência em Desenvolvimento de Aplicações Móveis no WorldSkills Portugal 2023.
+> Trabalhei com máquinas CNC e automação industrial e, pelo caminho, percebi que o que quero é trabalhar com dados e IA, como Data Analyst, Data/AI Engineer, ou Backend Python Developer."
+
+### EN
+> "I finished Computer Engineering at ISEC, in the Information Systems branch. I went through four internships, one of them in Spain with Erasmus+, and won the Medal of Excellence in Mobile Application Development at WorldSkills Portugal 2023.
+> I worked with CNC machines and industrial automation and, along the way, realised that what I want is to work with data and AI, as a Data Analyst, Data/AI Engineer, or Backend Python Developer."
+
+### Current Status
+Seeking first professional role as: **Data Analyst · Data/AI Engineer · Backend Python Developer**
+
+---
+
+## 🛠 Skills
+
+### Languages
+- Python ⭐ (primary)
+- SQL / PL/SQL ⭐ (primary)
+- Java
+- C++
+- C
+- PHP
+- JavaScript
+
+### Data & AI
+- Data Analysis
+- ETL (Extract, Transform, Load)
+- Machine Learning
+- Deep Learning / Transfer Learning
+- Power BI
+- Data Warehousing (Snowflake Schema)
+- RAG (Retrieval-Augmented Generation)
+- Embeddings / Vector Search
+
+### Databases
+- PostgreSQL + pgvector
+- MySQL
+- SQL Server
+
+### Tools & Frameworks
+- Git & GitHub
+- Streamlit
+- FastAPI
+- AJAX / jQuery
+- Fusion 360 (3D modelling)
+- LaserGRBL
+
+---
+
+## 🚀 Projects
+
+### 1. IndustrIA
+- **Type:** Personal project
+- **Category:** AI · RAG · LLM
+- **Status:** In progress (no demo yet)
+- **Description (PT):** Sistema de Q&A para manuais técnicos de manutenção industrial, usando arquitetura RAG. Os manuais chegam organizados de formas diferentes, por isso o desafio é extrair e organizar o conteúdo de diferentes fontes antes de responder a perguntas.
+- **Description (EN):** A Q&A system for industrial maintenance technical manuals, using RAG (Retrieval-Augmented Generation) architecture. Manuals arrive organized in different ways, so the challenge is to extract and organize content from different sources before querying.
+- **Stack:** Python · FastAPI · PostgreSQL · pgvector · LLM (Groq) · Embeddings (all-MiniLM-L6-v2)
+- **Flow:** PDFs → Extraction & Chunking → Embeddings → PostgreSQL+pgvector (cosine similarity) → LLM (Groq) → FastAPI
+- **GitHub:** https://github.com/danielsilvaengpt *(repo name TBD)*
+- **Demo:** None (in progress)
+
+### 2. BI do Porto Marítimo da Figueira da Foz
+- **Type:** University group project
+- **Category:** Data Engineering · BI · Power BI
+- **Description (PT):** Data Mart em esquema Snowflake, alimentado por um ETL em Python, com dashboards Power BI para acompanhar KPIs de receita, eficiência operacional e desempenho da tripulação.
+- **Description (EN):** Data Mart in Snowflake schema, fed by a Python ETL, with Power BI dashboards to track KPIs for revenue, operational efficiency and crew performance.
+- **Stack:** Python · MySQL · SQL Server · CSV · Power BI · Snowflake Schema
+- **Flow:** Simulated ERP (MySQL) + CSV → Python ETL → SQL Server Data Mart → Power BI (5 dashboards)
+- **GitHub:** https://github.com/danielsilvaengpt/BI-FigueiradaFoz
+- **Demo:** None (Power BI report)
+
+### 3. DermoScan AI — Skin Disease Classifier
+- **Type:** University group project
+- **Category:** Deep Learning · Computer Vision
+- **Description (PT):** Classificador de doenças de pele usando Transfer Learning com MobileNetV2. Atingiu 72% de precisão. Dataset do Kaggle.
+- **Description (EN):** Skin disease classifier using Transfer Learning with MobileNetV2. Achieved 72% accuracy. Dataset from Kaggle (skin diseases).
+- **Stack:** Python · Deep Learning · MobileNetV2 · Streamlit
+- **Flow:** Image (skin lesion) → MobileNetV2 (Transfer Learning) → Random Search (hyperparameter optimization) → Streamlit app
+- **GitHub:** https://github.com/danielsilvaengpt/skin-disease-classifier
+- **Demo:** https://dermoscanai.streamlit.app/
+
+### 4. WaterWise Calculator
+- **Type:** Erasmus+ solo project
+- **Category:** Full-stack Web
+- **Description (PT):** App web para calcular a pegada hídrica, pensada para qualquer pessoa. O utilizador constrói uma lista de alimentos, cada um com o seu consumo de água (em ml), e a app totaliza tudo. Criada a solo durante o estágio Erasmus+ em Málaga, com atualizações de dados em tempo real e layout responsivo.
+- **Description (EN):** Web app to calculate the water footprint, designed for anyone. The user builds a list of foods, each with their water consumption (in ml), and the app totals it. Built solo during Erasmus+ internship in Málaga, with real-time data updates and responsive layout.
+- **Stack:** PHP · MySQL · AJAX · jQuery · CSS3
+- **Flow:** Interface (jQuery & CSS3) → AJAX (real-time) → PHP → MySQL
+- **GitHub:** https://github.com/danielsilvaengpt/WaterWise-Calculator
+- **Demo:** None
+
+### 5. Python CNC Modelling Controller
+- **Type:** Curricular internship project (OPTIMA)
+- **Category:** Industrial Automation · Python
+- **Description (PT):** Software criado de raiz durante o estágio na OPTIMA para controlar uma máquina de modelação 3D por pinos. O utilizador importa um ficheiro CAD, o software mostra o objeto numa grelha 3D e permite correr a máquina, vendo tudo acontecer em tempo real.
+- **Description (EN):** Software built from scratch during the OPTIMA internship to control a 3D pin modelling machine — the pins rise to shape the object. The user imports a CAD file, the software shows the object on a 3D grid and allows the machine to run, seeing everything happen in real time.
+- **Stack:** Python · GUI · Trigonometry · Euclidean Geometry
+- **Flow:** CAD & NCP files → Python calculations (trigonometry & geometry) → Graphical interface (3D grid) → CNC Controller (real-time)
+- **GitHub:** https://github.com/danielsilvaengpt/Python-CNC-Modelling-Controller
+- **Demo:** None (hardware-specific)
+- **Note:** Repository is a logic demonstration — specific hardware parts removed for confidentiality.
+
+---
+
+## 💼 Experience
+
+### 1. AI Engineer Intern · Meight, Aveiro
+- **Period:** Feb 2026 – Jun 2026
+- **Type:** Curricular internship
+- **Tasks (EN):**
+  - Part of the data team on the Hybrid Search project; analysed existing implementation and suggested improvements for information retrieval (Python).
+  - Tested and compared different search approaches: Keyword Search, Embeddings Search, Hybrid Search. Experimented with Flat Text improvements.
+  - Created an internal project to help with new client onboarding, simplifying registration and better organising client-specific processes.
+
+### 2. Full-Stack Web Developer Intern · Internet Web Solutions, Málaga, Spain 🇪🇸
+- **Period:** Apr 2023 – May 2023
+- **Type:** Erasmus+ internship
+- **Tasks (EN):**
+  - Developed solo the WaterWise app to calculate water footprint, with PHP and MySQL.
+  - Used AJAX and jQuery to process data in real time, making the interface more dynamic.
+  - Handled responsive layout and CSS3 animations, focusing on user experience.
+
+### 3. Software Developer Intern · OPTIMA – Equipamentos CNC, Aveiro
+- **Period:** Apr 2023 – Jun 2023
+- **Type:** Curricular internship
+- **Tasks (EN):**
+  - Built from scratch a Python software to control a 3D modelling machine, with complex trigonometry and Euclidean geometry calculations.
+  - Built the GUI and connected the program in real time to the CNC controller, reading log and NCP files.
+  - Tested everything directly on the machine to ensure it worked under real conditions.
+
+### 4. IT & Hardware Technician Intern · OPTIMA – Equipamentos CNC, Aveiro
+- **Period:** Jun 2022 – Jul 2022
+- **Type:** Curricular internship
+- **Tasks (EN):**
+  - Configured, calibrated and operated 3D printers and scanners (Calibry), and modelled technical parts in Fusion 360.
+  - Provided technical support in an industrial environment, including calibrating laser cutting machines with clients (LaserGRBL).
+  - Started working with Python automation and Cartesian axis logic (XYZ).
+
+---
+
+## 🎓 Education
+
+### BSc Computer Engineering, Information Systems
+- **Institution:** Instituto Superior de Engenharia de Coimbra (ISEC)
+- **Period:** 2023 – 2026
+- **PT:** Licenciatura em Engenharia Informática, ramo de Sistemas de Informação
+
+### Technical Diploma in IT Management & Programming
+- **Institution:** Escola Secundária Dr. Serafim Leite
+- **Period:** 2020 – 2023
+- **PT:** Técnico de Gestão e Programação de Sistemas Informáticos
+
+### 🏅 Award
+- **Medal of Excellence** — WorldSkills Portugal 2023
+- Discipline: Mobile Application Development (national level)
+
+---
+
+## 🔗 All Links
+
+| Label | URL |
+|---|---|
+| Live Portfolio | https://danielsilvaengpt.github.io/portfolio/ |
+| GitHub Profile | https://github.com/danielsilvaengpt |
+| LinkedIn | https://www.linkedin.com/in/daniel-silva-eng-pt/ |
+| DermoScan AI Demo | https://dermoscanai.streamlit.app/ |
+| Project: BI Figueira da Foz | https://github.com/danielsilvaengpt/BI-FigueiradaFoz |
+| Project: Skin Classifier | https://github.com/danielsilvaengpt/skin-disease-classifier |
+| Project: WaterWise | https://github.com/danielsilvaengpt/WaterWise-Calculator |
+| Project: CNC Controller | https://github.com/danielsilvaengpt/Python-CNC-Modelling-Controller |
+| CV (PT) | /assets/cv/Daniel_Silva_CV_PT.pdf |
+| CV (EN) | /assets/cv/Daniel_Silva_CV_EN.pdf |

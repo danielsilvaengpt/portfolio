@@ -1,0 +1,63 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #080808;
+    --bg-subtle: #0f0f0f;
+    --bg-elevated: #161616;
+    --border: #1f1f1f;
+    --border-hover: #2e2e2e;
+
+    --text-primary: #f5f5f5;
+    --text-secondary: #a0a0a0;
+    --text-tertiary: #505050;
+
+    --accent: #e8e8e8;
+    --accent-muted: #303030;
+  }
+
+  :root.light {
+    --bg: #fafafa;
+    --bg-subtle: #f2f2f2;
+    --bg-elevated: #ffffff;
+    --border: #e5e5e5;
+    --border-hover: #c8c8c8;
+
+    --text-primary: #111111;
+    --text-secondary: #6b6b6b;
+    --text-tertiary: #bababa;
+
+    --accent: #111111;
+    --accent-muted: #e8e8e8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: var(--bg);
+    color: var(--text-primary);
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}

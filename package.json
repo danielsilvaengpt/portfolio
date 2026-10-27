@@ -1,0 +1,38 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://danielsilvaengpt.github.io/portfolio/",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.6.0",
+    "lucide-react": "^1.61.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-intersection-observer": "^11.0.1",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "autoprefixer": "^10.6.2",
+    "gh-pages": "^6.3.0",
+    "oxlint": "^1.88.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
+  }
+}
