@@ -5,8 +5,8 @@ import { Hero } from './components/sections/Hero'
 import { About } from './components/sections/About'
 import { Experience } from './components/sections/Experience'
 import { Projects } from './components/sections/Projects'
+import { Skills } from './components/sections/Skills'
 import { SectionLabel } from './components/ui/SectionLabel'
-import { Tag } from './components/ui/Tag'
 import { Mail } from 'lucide-react'
 
 // Custom SVGs for standard GitHub and LinkedIn icons
@@ -49,17 +49,8 @@ function PortfolioContent() {
       {/* Projects Section */}
       <Projects />
 
-      <section id="skills" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
-        <SectionLabel index="04" label="Skills" />
-        <div className="flex flex-wrap gap-2">
-          <Tag>Python</Tag>
-          <Tag>PostgreSQL</Tag>
-          <Tag>pgvector</Tag>
-          <Tag>Power BI</Tag>
-          <Tag>FastAPI</Tag>
-          <Tag>Streamlit</Tag>
-        </div>
-      </section>
+      {/* Skills Section */}
+      <Skills />
 
       <section id="education" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
         <SectionLabel index="05" label={lang === 'pt' ? 'Educação' : 'Education'} />
