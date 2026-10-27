@@ -7,6 +7,26 @@
 
 ## Changelog
 
+### [2026-10-27 01:45] — CONCEPT 2: SWISS LATENT DIMENSION — Full Cinematic Upgrade
+
+**Action:** Implementada a camada cinematográfica completa "Swiss Latent Dimension" (Concept 2) em todas as secções, de ponta a ponta.
+**Files created / modified:**
+- `src/components/ui/LatentMeshCanvas.tsx` (**UPGRADED**): adicionado `2D cursor comet trail` (canvas overlay), o cursor deixa um rasto luminoso suave; campo de partículas 26×26 com onda matemática; câmara Three.js viaja verticalmente com o scroll; data-packets na spline CatmullRom.
+- `src/components/ui/SpotlightCard.tsx` (**NEW**): card com spotlight radial-gradient especular que segue o rato — aplicado em Projetos, Skills, Educação e WorldSkills.
+- `src/components/ui/MaskedReveal.tsx` (**NEW**): texto oculto atrás de overflow-hidden que sobe ao entrar no viewport — aplicado no Hero (badge, nome, role, tagline) e About (blockquote).
+- `src/components/ui/SectionTransition.tsx` (**NEW**): divisor animado entre secções — duas linhas que expandem do centro para os lados + glifo ◈ que faz pop-in; cria fluxo contínuo visual entre todas as 7 secções.
+- `src/components/ui/ParallaxTicker.tsx` (**NEW**): marquee horizontal de keywords técnicas (AI/Agents/RAG/etc.) no Hero com parallax de scroll via Framer Motion `useScroll` + `useTransform`.
+- `src/components/sections/Hero.tsx`: integra `MaskedReveal` + `ParallaxTicker` + `AgentThoughtStream`.
+- `src/components/sections/About.tsx`: blockquote envolto em `MaskedReveal` para reveal cinematográfico.
+- `src/components/sections/Skills.tsx`: cada coluna de competências usa `SpotlightCard`.
+- `src/components/sections/Education.tsx`: cards de educação e award WorldSkills usam `SpotlightCard`.
+- `src/App.tsx`: `SectionTransition` inserido entre cada par de secções consecutivas.
+
+**Commit:** `daac937` — feat: Concept 2 Swiss Latent Dimension — full cinematic layer
+**Status:** ✅ Complete | Build: PASS | Deploy: IN PROGRESS → GitHub Pages
+
+---
+
 ### [2026-10-27 01:29] — CINEMATIC FILM DIRECTION — Site-Wide Continuous Cinematic Experience
 
 **Action:** Implementada a experiência cinematográfica contínua de ponta a ponta (Ideia 1: *The Neural Chronology*), transformando o portfólio numa experiência interativa de filme de ficção científica.
