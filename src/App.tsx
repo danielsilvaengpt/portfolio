@@ -6,6 +6,7 @@ import { About } from './components/sections/About'
 import { Experience } from './components/sections/Experience'
 import { Projects } from './components/sections/Projects'
 import { Skills } from './components/sections/Skills'
+import { Education } from './components/sections/Education'
 import { SectionLabel } from './components/ui/SectionLabel'
 import { Mail } from 'lucide-react'
 
@@ -52,13 +53,8 @@ function PortfolioContent() {
       {/* Skills Section */}
       <Skills />
 
-      <section id="education" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
-        <SectionLabel index="05" label={lang === 'pt' ? 'Educação' : 'Education'} />
-        <div className="font-mono text-sm text-text-secondary">
-          <p className="font-bold text-text-primary">ISEC — Licenciatura em Engenharia Informática</p>
-          <p className="text-xs text-text-tertiary">2023 – 2026 · Sistemas de Informação</p>
-        </div>
-      </section>
+      {/* Education Section */}
+      <Education />
 
       <section id="contact" className="max-w-6xl mx-auto px-6 py-20 border-t border-border mb-12">
         <SectionLabel index="06" label={lang === 'pt' ? 'Contacto' : 'Contact'} />
