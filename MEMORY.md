@@ -7,6 +7,21 @@
 
 ## Changelog
 
+### [2026-10-27 00:58] — /phase 6 — Projects Section Complete
+
+**Action:** Desenvolvida a secção de Projetos com os 5 projetos reais estruturados em cartões de grelha 2-colunas, animação de entrada com Framer Motion, drawer de expansão de fluxo de arquitetura/pipeline de dados e links externos dinâmicos (GitHub e Live Demo Streamlit).
+**Files created / modified:**
+- `src/data/projects.ts`: modelo tipado `ProjectItem` com os 5 projetos reais (IndustrIA RAG, BI Porto Figueira da Foz Snowflake, DermoScan AI Deep Learning, WaterWise Calculator Erasmus+, Python CNC Controller OPTIMA).
+- `src/components/sections/Projects.tsx`: grelha minimalista de cartões com índice numérico `01 //`, cabeçalho de categoria, título e tagline, descrição detalhada, visualizador interativo em acordeão de pipelines de dados (`Layers` e `GitBranch`), pills de stack tecnológico e links com seta animada 45° em hover (`ArrowUpRight`).
+- `src/App.tsx`: integração da nova secção `Projects`.
+
+**Decisions:**
+- Os fluxos de dados/arquitetura são inspecionáveis a pedido pelo utilizador via botão discreto, mantendo a limpeza estética do cartão por defeito.
+- A demonstração interativa do DermoScan AI no Streamlit foi associada ao botão direto `Demonstração / Live Demo`.
+
+**Status:** ✅ Complete  
+**Notes:** Phase 6 concluída e validada pelo `npm run build`.
+
 ### [2026-10-27 00:54] — /phase 5 — Experience Section Complete
 
 **Action:** Desenvolvida a secção de Experiência com linha de tempo vertical minimalista, dados bilingues estruturados dos 4 estágios e animação escalonada lateral via Framer Motion.

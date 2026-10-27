@@ -94,18 +94,18 @@
 
 ## Phase 6 — Projects Section
 
-- [ ] `SectionLabel`: `[04] PROJECTS`
-- [ ] Subtitle line: "Selected work — 5 projects across AI, data engineering, and web."
-- [ ] 2-col card grid (desktop), 1-col (mobile)
-- [ ] Five project cards:
-  - [ ] IndustrIA (AI · RAG)
-  - [ ] BI Figueira da Foz (Data Engineering · BI)
-  - [ ] DermoScan AI (Deep Learning)
-  - [ ] WaterWise Calculator (Full-stack · Erasmus+)
-  - [ ] Python CNC Controller (Industrial Automation)
-- [ ] Each card: category tag / title / 2-line description / stack pills / GitHub link (+ demo link if available)
-- [ ] Card hover: border brightens, title brightens, external arrow rotates 45°
-- [ ] Cards stagger-animate in on scroll
+- [x] `SectionLabel`: `[04] PROJECTS`
+- [x] Subtitle line: "Selected work — 5 projects across AI, data engineering, and web."
+- [x] 2-col card grid (desktop), 1-col (mobile)
+- [x] Five project cards:
+  - [x] IndustrIA (AI · RAG)
+  - [x] BI Figueira da Foz (Data Engineering · BI)
+  - [x] DermoScan AI (Deep Learning)
+  - [x] WaterWise Calculator (Full-stack · Erasmus+)
+  - [x] Python CNC Controller (Industrial Automation)
+- [x] Each card: category tag / title / 2-line description / stack pills / GitHub link (+ demo link if available)
+- [x] Card hover: border brightens, title brightens, external arrow rotates 45°
+- [x] Cards stagger-animate in on scroll
 
 ---
 
