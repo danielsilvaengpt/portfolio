@@ -1,10 +1,10 @@
 import { ThemeProvider } from './hooks/useTheme'
 import { I18nProvider, useI18n } from './hooks/useI18n'
 import { Navbar } from './components/layout/Navbar'
+import { Hero } from './components/sections/Hero'
 import { SectionLabel } from './components/ui/SectionLabel'
 import { Tag } from './components/ui/Tag'
-import { Button } from './components/ui/Button'
-import { ArrowDown, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 // Custom SVGs for standard GitHub and LinkedIn icons
 function GithubIcon({ className = 'w-3.5 h-3.5' }: { className?: string }) {
@@ -35,58 +35,7 @@ function PortfolioContent() {
       <Navbar />
 
       {/* Hero Section */}
-      <section
-        id="hero"
-        className="min-h-screen flex flex-col justify-center max-w-6xl mx-auto px-6 pt-24 pb-12"
-      >
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 font-mono text-xs text-text-tertiary mb-6 uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-accent inline-block animate-pulse" />
-            <span>Aveiro, Portugal · 2026</span>
-          </div>
-
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter text-text-primary mb-6 leading-none">
-            Daniel Silva
-          </h1>
-
-          <p className="font-mono text-sm sm:text-base text-text-secondary mb-3">
-            {lang === 'pt'
-              ? 'Engenheiro Informático Júnior — IA & Análise de Dados'
-              : 'Junior Computer Engineer — AI & Data Analysis'}
-          </p>
-
-          <p className="font-mono text-xs sm:text-sm text-text-tertiary italic mb-10">
-            {lang === 'pt' ? '“Do metal aos dados.”' : '“From metal to data.”'}
-          </p>
-
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href={
-                lang === 'pt'
-                  ? '/assets/cv/Daniel_Silva_CV_PT.pdf'
-                  : '/assets/cv/Daniel_Silva_CV_EN.pdf'
-              }
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button variant="solid" size="md">
-                {lang === 'pt' ? 'Download CV' : 'Download CV'}
-              </Button>
-            </a>
-            <Button
-              variant="outline"
-              size="md"
-              onClick={() => {
-                const el = document.getElementById('about')
-                el?.scrollIntoView({ behavior: 'smooth' })
-              }}
-              icon={<ArrowDown className="w-3.5 h-3.5" />}
-            >
-              {lang === 'pt' ? 'Ver Percurso' : 'Explore Work'}
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Sections Preview / Stubs for later phases */}
       <section id="about" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
