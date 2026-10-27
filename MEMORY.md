@@ -7,6 +7,20 @@
 
 ## Changelog
 
+### [2026-10-27 01:03] — /phase 7 — Skills Section Complete
+
+**Action:** Desenvolvida a secção de Competências Técnicas dividida em 4 domínios de engenharia com layout responsivo de 4 colunas em grelha, tipografia mono e zero barras de percentagem.
+**Files created / modified:**
+- `src/data/skills.ts`: estrutura de dados `SKILL_CATEGORIES` abrangendo as 4 categorias principais: Linguagens (Python & SQL core), IA & Dados (RAG, Embeddings, ETL, ML, Power BI, Snowflake), Bases de Dados (PostgreSQL, pgvector, MySQL, SQL Server) e Ferramentas & Frameworks (FastAPI, Streamlit, Git/GitHub, CAD 3D).
+- `src/components/sections/Skills.tsx`: 4 colunas com cabeçalhos técnicos em mono, micro-ícones de domínio (`Terminal`, `Cpu`, `Database`, `Wrench`), marcadores de pontos reativos e badges `Core` para competências nucleares.
+- `src/App.tsx`: integração da nova secção `Skills`.
+
+**Decisions:**
+- Eliminação completa de barras de percentagem arbitrárias que denotam amadorismo. A proficiência técnica é expressa pela clareza do escopo de domínio e ênfase nas tecnologias nucleares (`Core`).
+
+**Status:** ✅ Complete  
+**Notes:** Phase 7 concluída e validada pelo `npm run build`.
+
 ### [2026-10-27 00:58] — /phase 6 — Projects Section Complete
 
 **Action:** Desenvolvida a secção de Projetos com os 5 projetos reais estruturados em cartões de grelha 2-colunas, animação de entrada com Framer Motion, drawer de expansão de fluxo de arquitetura/pipeline de dados e links externos dinâmicos (GitHub e Live Demo Streamlit).

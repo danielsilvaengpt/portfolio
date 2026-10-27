@@ -111,16 +111,16 @@
 
 ## Phase 7 — Skills Section
 
-- [ ] `SectionLabel`: `[05] SKILLS`
-- [ ] 3–4 col grid layout (auto-fit, `minmax(180px, 1fr)`)
-- [ ] Four categories:
-  - [ ] LANGUAGES: Python · SQL · PL/SQL · Java · C++ · C · PHP · JavaScript
-  - [ ] DATA & AI: Data Analysis · ETL · Machine Learning · Deep Learning · Power BI · Data Warehousing · RAG · Embeddings
-  - [ ] DATABASES: PostgreSQL · pgvector · MySQL · SQL Server
-  - [ ] TOOLS: Git & GitHub · Streamlit · FastAPI · AJAX · jQuery
-- [ ] Each category: mono uppercase header + hairline rule + tag pills
-- [ ] **NO skill bars or percentages**
-- [ ] Stagger animation on tags
+- [x] `SectionLabel`: `[05] SKILLS`
+- [x] 3–4 col grid layout (auto-fit, `minmax(180px, 1fr)`)
+- [x] Four categories:
+  - [x] LANGUAGES: Python · SQL · PL/SQL · Java · C++ · C · PHP · JavaScript
+  - [x] DATA & AI: Data Analysis · ETL · Machine Learning · Deep Learning · Power BI · Data Warehousing · RAG · Embeddings
+  - [x] DATABASES: PostgreSQL · pgvector · MySQL · SQL Server
+  - [x] TOOLS: Git & GitHub · Streamlit · FastAPI · AJAX · jQuery
+- [x] Each category: mono uppercase header + hairline rule + tag pills
+- [x] **NO skill bars or percentages**
+- [x] Stagger animation on tags
 
 ---
 
