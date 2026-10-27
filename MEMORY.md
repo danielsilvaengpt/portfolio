@@ -7,6 +7,22 @@
 
 ## Changelog
 
+### [2026-10-27 00:51] — /phase 4 — About Section Complete
+
+**Action:** Desenvolvida a secção Sobre Mim com layout editorial assimétrico, citação pull-quote, grelha técnica de factoids e tratamento fotográfico com hover interativo. Descarregados os assets originais (foto de perfil e CVs em PDF).
+**Files created / modified:**
+- `src/components/sections/About.tsx`: layout assimétrico (7 cols texto / 5 cols foto), com bloco de citação editorial, dois parágrafos focados na transição do meio industrial para IA e dados, grelha com 5 factoids (Localização, Estado, Formação ISEC, Distinção WorldSkills, Idiomas), e frame fotográfica `FIG. 01` com transição grayscale para cor em hover.
+- `public/assets/img/daniel.jpg`: imagem de perfil original importada.
+- `public/assets/cv/Daniel_Silva_CV_PT.pdf` & `Daniel_Silva_CV_EN.pdf`: currículos originais em PDF importados para download direto.
+- `src/App.tsx`: substituição do stub pela secção `About` interativa.
+
+**Decisions:**
+- A imagem utiliza filtro em tons de cinza suave por defeito que revela a cor natural suavemente (`transition-all duration-700 ease-out`) ao passar o rato, trazendo sofisticação e reduzindo a saturação visual.
+- A grelha técnica de factoids organiza credenciais-chave (WorldSkills, ISEC, Status) de forma imediata e legível para recrutadores.
+
+**Status:** ✅ Complete  
+**Notes:** Phase 4 concluída e validada pelo `npm run build`.
+
 ### [2026-10-27 00:46] — /phase 3 — Hero Section Complete
 
 **Action:** Desenvolvida a secção Hero de alto impacto tipográfico editorial utilizando Framer Motion e suporte a acessibilidade (reduced motion).

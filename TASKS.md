@@ -67,13 +67,13 @@
 
 ## Phase 4 — About Section
 
-- [ ] `SectionLabel`: `[02] ABOUT`
-- [ ] Large pull-quote bio (2–3 sentences, `clamp(1.1rem, 2.5vw, 1.5rem)`, 500 weight)
-- [ ] Asymmetric grid: text (5 cols) + photo (7 cols) on desktop; stacked on mobile
-- [ ] Profile photo: square, `object-fit: cover`, grayscale filter (`filter: grayscale(100%)`)
-- [ ] Photo hover: grayscale fades to color (0.4s transition) — subtle delight
-- [ ] Factoid list (mono): `LOCATION · Aveiro, Portugal` / `STATUS · Open to work` / `DEGREE · BSc Computer Engineering, ISEC` / `AWARD · WorldSkills 2023 — Medal of Excellence`
-- [ ] Scroll-triggered entry animation (fade + rise)
+- [x] `SectionLabel`: `[02] ABOUT`
+- [x] Large pull-quote bio (2–3 sentences, `clamp(1.1rem, 2.5vw, 1.5rem)`, 500 weight)
+- [x] Asymmetric grid: text (5 cols) + photo (7 cols) on desktop; stacked on mobile
+- [x] Profile photo: square, `object-fit: cover`, grayscale filter (`filter: grayscale(100%)`)
+- [x] Photo hover: grayscale fades to color (0.4s transition) — subtle delight
+- [x] Factoid list (mono): `LOCATION · Aveiro, Portugal` / `STATUS · Open to work` / `DEGREE · BSc Computer Engineering, ISEC` / `AWARD · WorldSkills 2023 — Medal of Excellence`
+- [x] Scroll-triggered entry animation (fade + rise)
 
 ---
 
