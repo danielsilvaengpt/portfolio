@@ -10,10 +10,14 @@ import { Education } from './components/sections/Education'
 import { Contact } from './components/sections/Contact'
 import { Footer } from './components/layout/Footer'
 import { SynapticCanvas } from './components/ui/SynapticCanvas'
+import { CinematicOverlay } from './components/ui/CinematicOverlay'
 
 function PortfolioContent() {
   return (
     <div className="min-h-screen bg-bg text-text-primary selection:bg-text-primary selection:text-bg relative">
+      {/* Cinematic Film Grain, Reticle Cursor & Telemetry */}
+      <CinematicOverlay />
+
       {/* Continuous 3D Synaptic Thread (Three.js WebGL) */}
       <SynapticCanvas />
 

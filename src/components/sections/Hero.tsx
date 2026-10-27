@@ -3,6 +3,7 @@ import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { ArrowDown, FileDown } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { AgentThoughtStream } from '../ui/AgentThoughtStream'
+import { ScrambleText } from '../ui/ScrambleText'
 import { useI18n } from '../../hooks/useI18n'
 
 export const Hero: React.FC = () => {
@@ -47,16 +48,18 @@ export const Hero: React.FC = () => {
           <span>DANIEL SILVA — AI & AGENTIC SYSTEMS 2026</span>
         </motion.div>
 
-        {/* Large Name Display */}
-        <motion.h1
+        {/* Large Name Display with AI Decryption */}
+        <motion.div
           custom={1}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-text-primary mb-6 leading-[0.9]"
+          className="mb-6 leading-[0.9]"
         >
-          Daniel Silva
-        </motion.h1>
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-text-primary">
+            <ScrambleText text="Daniel Silva" />
+          </h1>
+        </motion.div>
 
         {/* Professional Role */}
         <motion.p
