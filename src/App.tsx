@@ -2,6 +2,7 @@ import { ThemeProvider } from './hooks/useTheme'
 import { I18nProvider, useI18n } from './hooks/useI18n'
 import { Navbar } from './components/layout/Navbar'
 import { Hero } from './components/sections/Hero'
+import { About } from './components/sections/About'
 import { SectionLabel } from './components/ui/SectionLabel'
 import { Tag } from './components/ui/Tag'
 import { Mail } from 'lucide-react'
@@ -37,15 +38,10 @@ function PortfolioContent() {
       {/* Hero Section */}
       <Hero />
 
+      {/* About Section */}
+      <About />
+
       {/* Sections Preview / Stubs for later phases */}
-      <section id="about" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
-        <SectionLabel index="01" label={lang === 'pt' ? 'Sobre mim' : 'About'} />
-        <div className="max-w-2xl font-mono text-sm text-text-secondary leading-relaxed">
-          {lang === 'pt'
-            ? 'Terminei Engenharia Informática no ISEC, no ramo de Sistemas de Informação. Trabalhei com máquinas CNC e automação industrial e percebi que o que procuro é trabalhar com dados e IA.'
-            : 'I finished Computer Engineering at ISEC. Having worked with CNC machines and industrial automation, I realized my passion lies in data and AI.'}
-        </div>
-      </section>
 
       <section id="experience" className="max-w-6xl mx-auto px-6 py-20 border-t border-border">
         <SectionLabel index="02" label={lang === 'pt' ? 'Experiência' : 'Experience'} />
