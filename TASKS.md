@@ -52,16 +52,16 @@
 
 ## Phase 3 — Hero Section
 
-- [ ] Full viewport height (`100svh`)
-- [ ] Vertical centering (flex column center)
-- [ ] Tiny pre-title mono label: `DANIEL SILVA — PORTFOLIO 2026`
-- [ ] Large name: `Daniel Silva` — `clamp(3rem, 10vw, 8rem)`, weight 700, tracking -0.03em
-- [ ] Role line: `Junior Computer Engineer — AI & Data Analysis` — mono, secondary
-- [ ] Tagline: `"Do metal aos dados."` — italic, tertiary, slightly smaller
-- [ ] CTA row: `[Download CV]` outlined button + `View Work ↓` ghost link
-- [ ] Scroll indicator: vertical hairline line that extends downward, mono `scroll` label
-- [ ] Entry animation: name fades + rises (0.6s, 0.1s delay), role (0.8s), tagline (1.0s), CTAs (1.2s)
-- [ ] **NO background canvas/WebGL** — the typography is the hero
+- [x] Full viewport height (`100svh`)
+- [x] Vertical centering (flex column center)
+- [x] Tiny pre-title mono label: `DANIEL SILVA — PORTFOLIO 2026`
+- [x] Large name: `Daniel Silva` — `clamp(3rem, 10vw, 8rem)`, weight 700, tracking -0.03em
+- [x] Role line: `Junior Computer Engineer — AI & Data Analysis` — mono, secondary
+- [x] Tagline: `"Do metal aos dados."` — italic, tertiary, slightly smaller
+- [x] CTA row: `[Download CV]` outlined button + `View Work ↓` ghost link
+- [x] Scroll indicator: vertical hairline line that extends downward, mono `scroll` label
+- [x] Entry animation: name fades + rises (0.6s, 0.1s delay), role (0.8s), tagline (1.0s), CTAs (1.2s)
+- [x] **NO background canvas/WebGL** — the typography is the hero
 
 ---
 

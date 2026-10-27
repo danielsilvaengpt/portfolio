@@ -7,6 +7,21 @@
 
 ## Changelog
 
+### [2026-10-27 00:46] — /phase 3 — Hero Section Complete
+
+**Action:** Desenvolvida a secção Hero de alto impacto tipográfico editorial utilizando Framer Motion e suporte a acessibilidade (reduced motion).
+**Files created / modified:**
+- `src/components/sections/Hero.tsx`: secção Hero em ecrã inteiro (`100svh`), com pré-título mono, nome em escala massiva (`clamp(3rem, 10vw, 8rem)`), subtítulo profissional, tagline em itálico, botões de ação (Download CV com ícone, Scroll até ao percurso), e indicador de scroll inferior com coordenadas geográficas de Aveiro.
+- `src/App.tsx`: integração do novo componente `Hero`.
+- Animações escalonadas (`stagger`) com curvas suaves (`easeOut`) e respeito automático por utilizadores com preferência por movimento reduzido.
+
+**Decisions:**
+- Zero poluição visual ou canvas 3D no fundo — a tipografia com tracking negativo e espaçamentos generosos comanda toda a presença da página.
+- Download CV aponta para caminhos relativos dos PDFs bilingues.
+
+**Status:** ✅ Complete  
+**Notes:** Phase 3 concluída e validada pelo `npm run build`.
+
 ### [2026-10-27 00:44] — /phase 1 & /phase 2 — Base UI & Navbar Complete
 
 **Action:** Desenvolvida toda a infraestrutura da Fase 1 (Design Tokens, ThemeContext, I18nContext, componentes base UI) e da Fase 2 (Navbar responsivo completo).
