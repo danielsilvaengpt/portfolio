@@ -7,6 +7,20 @@
 
 ## Changelog
 
+### [2026-10-27 01:13] — /phase 11 & /phase 12 — i18n Locales & Animations Polish Complete
+
+**Action:** Estruturados os dicionários JSON de internacionalização (`src/locales/pt.json` e `src/locales/en.json`) e criados os utilitários padronizados de animação Framer Motion (`src/lib/animations.ts`) com respeito por acessibilidade e redução de movimento.
+**Files created / modified:**
+- `src/locales/pt.json` & `src/locales/en.json`: dicionários completos contendo strings para navbar, hero, sobre mim, contacto e rodapé.
+- `src/hooks/useI18n.tsx`: enriquecido com a função de resolução recursiva de chaves `t(path: string)`.
+- `src/lib/animations.ts`: variantes reutilizáveis de animação (`fadeUpVariant`, `fadeInVariant`, `slideLeftVariant`, `staggerContainerVariant`) calibradas com curva exponencial suave `[0.16, 1, 0.3, 1]`.
+
+**Decisions:**
+- O suporte a `prefers-reduced-motion` previne qualquer desconforto vestibular para utilizadores com sensibilidade a movimentos, desativando automaticamente deslocamentos em Y/X e mantendo apenas transições suaves de opacidade.
+
+**Status:** ✅ Complete  
+**Notes:** Fases 11 e 12 concluídas e validadas pelo `npm run build`.
+
 ### [2026-10-27 01:10] — /phase 9 & /phase 10 — Contact Section & Footer Complete
 
 **Action:** Desenvolvida a secção de Contacto (com tipografia de alta escala para e-mail direto, botão de cópia com um clique para a área de transferência, disponibilidade imediata, links sociais e download de CVs) e o Rodapé minimalista com botão Back to Top.

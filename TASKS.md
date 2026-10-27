@@ -161,21 +161,21 @@
 
 ## Phase 11 — i18n (PT ↔ EN)
 
-- [ ] Create `locales/pt.json` with all PT strings
-- [ ] Create `locales/en.json` with all EN strings
-- [ ] `LangToggle` component — updates `<html lang>` attribute
-- [ ] All text content driven from locale files
-- [ ] Default language: PT
+- [x] Create `locales/pt.json` with all PT strings
+- [x] Create `locales/en.json` with all EN strings
+- [x] `LangToggle` component — updates `<html lang>` attribute
+- [x] All text content driven from locale files
+- [x] Default language: PT
 
 ---
 
 ## Phase 12 — Animations Polish Pass
 
-- [ ] Review all scroll-triggered animations for consistency
-- [ ] Ensure stagger delays feel natural (0.08s between items)
-- [ ] Verify hero entry animation timing (0.6s → 0.8s → 1.0s → 1.2s)
-- [ ] Test on slow motion (Framer Motion `reducedMotion: 'user'` respect)
-- [ ] Check `prefers-reduced-motion` — disable animations if user prefers
+- [x] Review all scroll-triggered animations for consistency
+- [x] Ensure stagger delays feel natural (0.08s between items)
+- [x] Verify hero entry animation timing (0.6s → 0.8s → 1.0s → 1.2s)
+- [x] Test on slow motion (Framer Motion `reducedMotion: 'user'` respect)
+- [x] Check `prefers-reduced-motion` — disable animations if user prefers
 
 ---
 
