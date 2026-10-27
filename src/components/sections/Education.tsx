@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useInView, type Variants } from 'framer-motion'
 import { SectionLabel } from '../ui/SectionLabel'
+import { SpotlightCard } from '../ui/SpotlightCard'
 import { useI18n } from '../../hooks/useI18n'
 import { EDUCATION_ITEMS, AWARDS } from '../../data/education'
 import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react'
@@ -61,8 +62,8 @@ export const Education: React.FC = () => {
                 <motion.div
                   key={edu.id}
                   variants={itemVariants}
-                  className="p-6 rounded-lg border border-border bg-bg-subtle/50 hover:border-border-hover transition-colors"
                 >
+                  <SpotlightCard className="p-6">
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
                     <h3 className="text-lg sm:text-xl font-bold tracking-tight text-text-primary">
                       {degree}
@@ -96,6 +97,7 @@ export const Education: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+                  </SpotlightCard>
                 </motion.div>
               )
             })}
@@ -120,8 +122,8 @@ export const Education: React.FC = () => {
               <motion.div
                 key={award.id}
                 variants={itemVariants}
-                className="relative p-6 sm:p-8 rounded-lg border border-border bg-bg-subtle hover:border-border-hover transition-all duration-300 group"
               >
+                <SpotlightCard className="p-6 sm:p-8" spotlightColor="rgba(255,255,255,0.1)">
                 {/* Subtle top indicator */}
                 <div className="flex items-center justify-between font-mono text-[11px] mb-4">
                   <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-border text-text-primary bg-bg text-[10px] font-bold tracking-wider uppercase">
@@ -130,7 +132,7 @@ export const Education: React.FC = () => {
                   <span className="text-text-tertiary">{level}</span>
                 </div>
 
-                <h3 className="text-2xl font-bold tracking-tight text-text-primary mb-2 flex items-center gap-2 group-hover:text-accent transition-colors">
+                <h3 className="text-2xl font-bold tracking-tight text-text-primary mb-2 flex items-center gap-2 transition-colors">
                   <span>🏅</span>
                   <span>{title}</span>
                 </h3>
@@ -151,6 +153,7 @@ export const Education: React.FC = () => {
                   <span>EXCELLENCE IN CODING</span>
                   <span>NATIONAL FINALIST</span>
                 </div>
+                </SpotlightCard>
               </motion.div>
             )
           })}

@@ -9,17 +9,14 @@ import { Skills } from './components/sections/Skills'
 import { Education } from './components/sections/Education'
 import { Contact } from './components/sections/Contact'
 import { Footer } from './components/layout/Footer'
-import { SynapticCanvas } from './components/ui/SynapticCanvas'
-import { CinematicOverlay } from './components/ui/CinematicOverlay'
+import { LatentMeshCanvas } from './components/ui/LatentMeshCanvas'
+import { SectionTransition } from './components/ui/SectionTransition'
 
 function PortfolioContent() {
   return (
     <div className="min-h-screen bg-bg text-text-primary selection:bg-text-primary selection:text-bg relative">
-      {/* Cinematic Film Grain, Reticle Cursor & Telemetry */}
-      <CinematicOverlay />
-
-      {/* Continuous 3D Synaptic Thread (Three.js WebGL) */}
-      <SynapticCanvas />
+      {/* Swiss Precision Latent Vector Mesh (Three.js WebGL) */}
+      <LatentMeshCanvas />
 
       <div className="relative z-10">
         <Navbar />
@@ -28,20 +25,32 @@ function PortfolioContent() {
           {/* 01. Hero Section */}
           <Hero />
 
+          <SectionTransition glyph="◈" label="about" />
+
           {/* 02. About Section */}
           <About />
+
+          <SectionTransition glyph="◈" label="experience" />
 
           {/* 03. Experience Section */}
           <Experience />
 
+          <SectionTransition glyph="◈" label="projects" />
+
           {/* 04. Projects Section */}
           <Projects />
+
+          <SectionTransition glyph="◈" label="skills" />
 
           {/* 05. Skills Section */}
           <Skills />
 
+          <SectionTransition glyph="◈" label="education" />
+
           {/* 06. Education & Honors Section */}
           <Education />
+
+          <SectionTransition glyph="◈" label="contact" />
 
           {/* 07. Contact Section */}
           <Contact />

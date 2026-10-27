@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useInView, type Variants } from 'framer-motion'
 import { SectionLabel } from '../ui/SectionLabel'
+import { SpotlightCard } from '../ui/SpotlightCard'
 import { useI18n } from '../../hooks/useI18n'
 import { SKILL_CATEGORIES } from '../../data/skills'
 import { Terminal, Database, Cpu, Wrench } from 'lucide-react'
@@ -67,43 +68,45 @@ export const Skills: React.FC = () => {
             <motion.div
               key={cat.id}
               variants={columnVariants}
-              className="flex flex-col p-6 rounded-lg border border-border bg-bg-subtle/50 hover:border-border-hover transition-colors"
+              className="h-full"
             >
-              {/* Category Header */}
-              <div className="mb-5 pb-3 border-b border-border flex flex-col gap-1">
-                <div className="flex items-center gap-2">
-                  {categoryIcons[cat.id]}
-                  <h3 className="font-mono text-xs font-bold tracking-widest text-text-primary uppercase">
-                    {label}
-                  </h3>
+              <SpotlightCard className="p-6 h-full flex flex-col">
+                {/* Category Header */}
+                <div className="mb-5 pb-3 border-b border-border flex flex-col gap-1">
+                  <div className="flex items-center gap-2">
+                    {categoryIcons[cat.id]}
+                    <h3 className="font-mono text-xs font-bold tracking-widest text-text-primary uppercase">
+                      {label}
+                    </h3>
+                  </div>
+                  <span className="font-mono text-[10px] text-text-tertiary">
+                    {description}
+                  </span>
                 </div>
-                <span className="font-mono text-[10px] text-text-tertiary">
-                  {description}
-                </span>
-              </div>
 
-              {/* Skills List */}
-              <ul className="flex flex-col gap-2.5 font-mono text-xs text-text-secondary">
-                {cat.skills.map((skill) => (
-                  <li
-                    key={skill.name}
-                    className="flex items-center justify-between group/skill hover:text-text-primary transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-border group-hover/skill:bg-accent transition-colors" />
-                      <span className={skill.isPrimary ? 'text-text-primary font-medium' : ''}>
-                        {skill.name}
-                      </span>
-                    </div>
+                {/* Skills List */}
+                <ul className="flex flex-col gap-2.5 font-mono text-xs text-text-secondary">
+                  {cat.skills.map((skill) => (
+                    <li
+                      key={skill.name}
+                      className="flex items-center justify-between group/skill hover:text-text-primary transition-colors"
+                    >
+                      <div className="flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-border group-hover/skill:bg-accent transition-colors" />
+                        <span className={skill.isPrimary ? 'text-text-primary font-medium' : ''}>
+                          {skill.name}
+                        </span>
+                      </div>
 
-                    {skill.isPrimary && (
-                      <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded border border-border/80 text-text-tertiary group-hover/skill:border-border-hover transition-colors">
-                        Core
-                      </span>
-                    )}
-                  </li>
-                ))}
-              </ul>
+                      {skill.isPrimary && (
+                        <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded border border-border/80 text-text-tertiary group-hover/skill:border-border-hover transition-colors">
+                          Core
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </SpotlightCard>
             </motion.div>
           )
         })}

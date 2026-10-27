@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useInView, type Variants } from 'framer-motion'
 import { SectionLabel } from '../ui/SectionLabel'
+import { MaskedReveal } from '../ui/MaskedReveal'
 import { useI18n } from '../../hooks/useI18n'
 import { Award, MapPin, Briefcase, GraduationCap, Languages } from 'lucide-react'
 
@@ -82,6 +83,7 @@ export const About: React.FC = () => {
       >
         {/* Left Column: Editorial Pull-Quote & Narrative */}
         <div className="lg:col-span-7 space-y-6">
+          <MaskedReveal delay={0.1} duration={0.9}>
           <motion.blockquote
             variants={itemVariants}
             className="text-2xl sm:text-3xl font-medium tracking-tight text-text-primary leading-snug"
@@ -104,6 +106,7 @@ export const About: React.FC = () => {
               </>
             )}
           </motion.blockquote>
+          </MaskedReveal>
 
           <motion.div
             variants={itemVariants}

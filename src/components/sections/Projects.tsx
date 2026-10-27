@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion, useInView, type Variants } from 'framer-motion'
 import { SectionLabel } from '../ui/SectionLabel'
 import { Tag } from '../ui/Tag'
+import { SpotlightCard } from '../ui/SpotlightCard'
 import { useI18n } from '../../hooks/useI18n'
 import { PROJECTS, type ProjectItem } from '../../data/projects'
 import { ArrowUpRight, GitBranch, Layers, ExternalLink } from 'lucide-react'
@@ -41,7 +42,7 @@ export const Projects: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
     },
   }
 
@@ -55,7 +56,7 @@ export const Projects: React.FC = () => {
       ref={ref}
       className="max-w-6xl mx-auto px-6 py-28 border-t border-border select-none"
     >
-      <SectionLabel index="03" label={lang === 'pt' ? 'Projetos' : 'Projects'} />
+      <SectionLabel index="03" label={lang === 'pt' ? 'Projetos Selecionados' : 'Selected Projects'} />
 
       <div className="mb-14 max-w-2xl">
         <p className="font-mono text-xs sm:text-sm text-text-secondary leading-relaxed">
@@ -80,118 +81,116 @@ export const Projects: React.FC = () => {
           const isFlowOpen = expandedFlow === proj.id
 
           return (
-            <motion.article
-              key={proj.id}
-              variants={cardVariants}
-              className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-lg border border-border bg-bg-subtle hover:border-border-hover hover:bg-bg-elevated transition-all duration-300"
-            >
-              <div>
-                {/* Header row: Index & Category */}
-                <div className="flex items-center justify-between gap-3 mb-4 font-mono text-[11px]">
-                  <div className="flex items-center gap-2">
-                    <span className="text-text-tertiary">0{index + 1} //</span>
-                    <span className="text-text-secondary font-medium tracking-wider uppercase">
-                      {category}
+            <motion.div key={proj.id} variants={cardVariants} className="h-full">
+              <SpotlightCard className="p-6 sm:p-8 h-full">
+                <div>
+                  {/* Header row: Index & Category */}
+                  <div className="flex items-center justify-between gap-3 mb-4 font-mono text-[11px]">
+                    <div className="flex items-center gap-2">
+                      <span className="text-text-tertiary">0{index + 1} //</span>
+                      <span className="text-text-secondary font-medium tracking-wider uppercase">
+                        {category}
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-text-tertiary hidden sm:inline">
+                      {type}
                     </span>
                   </div>
-                  <span className="text-[10px] text-text-tertiary hidden sm:inline">
-                    {type}
-                  </span>
+
+                  {/* Title and Tagline */}
+                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-text-primary group-hover:text-accent transition-colors mb-2">
+                    {proj.title}
+                  </h3>
+                  <p className="font-mono text-xs text-text-tertiary italic mb-4">
+                    {tagline}
+                  </p>
+
+                  {/* Narrative Description */}
+                  <p className="font-mono text-xs sm:text-sm text-text-secondary leading-relaxed mb-6">
+                    {description}
+                  </p>
+
+                  {/* Flow Diagram Drawer (if available) */}
+                  {flow && (
+                    <div className="mb-6">
+                      <button
+                        onClick={() => toggleFlow(proj.id)}
+                        className="inline-flex items-center gap-1.5 font-mono text-[11px] text-text-tertiary hover:text-text-primary transition-colors focus:outline-none"
+                      >
+                        <Layers className="w-3.5 h-3.5" />
+                        <span>
+                          {isFlowOpen
+                            ? lang === 'pt'
+                              ? 'Ocultar fluxo de dados'
+                              : 'Hide data pipeline'
+                            : lang === 'pt'
+                            ? 'Ver fluxo de dados / arquitetura'
+                            : 'Inspect data pipeline / flow'}
+                        </span>
+                      </button>
+
+                      {isFlowOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="mt-3 p-3.5 rounded border border-border bg-bg/90 font-mono text-[11px] text-text-secondary leading-relaxed backdrop-blur-sm"
+                        >
+                          <div className="text-[10px] uppercase text-text-tertiary mb-1 flex items-center gap-1">
+                            <GitBranch className="w-3 h-3" /> PIPELINE:
+                          </div>
+                          {flow}
+                        </motion.div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Stack Tags */}
+                  <div className="flex flex-wrap gap-1.5 mb-6">
+                    {proj.stack.map((tech) => (
+                      <Tag key={tech}>{tech}</Tag>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Title and Tagline */}
-                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-text-primary group-hover:text-accent transition-colors mb-2">
-                  {proj.title}
-                </h3>
-                <p className="font-mono text-xs text-text-tertiary italic mb-4">
-                  {tagline}
-                </p>
-
-                {/* Narrative Description */}
-                <p className="font-mono text-xs sm:text-sm text-text-secondary leading-relaxed mb-6">
-                  {description}
-                </p>
-
-                {/* Flow Diagram Drawer (if available) */}
-                {flow && (
-                  <div className="mb-6">
-                    <button
-                      onClick={() => toggleFlow(proj.id)}
-                      className="inline-flex items-center gap-1.5 font-mono text-[11px] text-text-tertiary hover:text-text-primary transition-colors focus:outline-none"
-                    >
-                      <Layers className="w-3.5 h-3.5" />
-                      <span>
-                        {isFlowOpen
-                          ? lang === 'pt'
-                            ? 'Ocultar fluxo de dados'
-                            : 'Hide data pipeline'
-                          : lang === 'pt'
-                          ? 'Ver fluxo de dados / arquitetura'
-                          : 'Inspect data pipeline / flow'}
-                      </span>
-                    </button>
-
-                    {isFlowOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="mt-3 p-3 rounded border border-border bg-bg font-mono text-[11px] text-text-secondary leading-relaxed"
+                {/* Footer Links */}
+                <div className="pt-4 border-t border-border flex items-center justify-between font-mono text-xs">
+                  <div className="flex items-center gap-4">
+                    {proj.githubUrl && (
+                      <a
+                        href={proj.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-1.5 text-text-secondary hover:text-text-primary transition-colors group/link"
                       >
-                        <div className="text-[10px] uppercase text-text-tertiary mb-1 flex items-center gap-1">
-                          <GitBranch className="w-3 h-3" /> PIPELINE:
-                        </div>
-                        {flow}
-                      </motion.div>
+                        <GithubIcon className="w-3.5 h-3.5" />
+                        <span>GitHub</span>
+                        <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                      </a>
+                    )}
+
+                    {proj.demoUrl && (
+                      <a
+                        href={proj.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-1.5 text-text-primary hover:text-accent font-medium transition-colors group/demo"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>{lang === 'pt' ? 'Demonstração' : 'Live Demo'}</span>
+                        <ArrowUpRight className="w-3 h-3 group-hover/demo:translate-x-0.5 group-hover/demo:-translate-y-0.5 transition-transform" />
+                      </a>
                     )}
                   </div>
-                )}
 
-                {/* Stack Tags */}
-                <div className="flex flex-wrap gap-1.5 mb-6">
-                  {proj.stack.map((tech) => (
-                    <Tag key={tech}>{tech}</Tag>
-                  ))}
-                </div>
-              </div>
-
-              {/* Footer Links */}
-              <div className="pt-4 border-t border-border flex items-center justify-between font-mono text-xs">
-                <div className="flex items-center gap-4">
-                  {proj.githubUrl && (
-                    <a
-                      href={proj.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 text-text-secondary hover:text-text-primary transition-colors group/link"
-                    >
-                      <GithubIcon className="w-3.5 h-3.5" />
-                      <span>GitHub</span>
-                      <ArrowUpRight className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                    </a>
-                  )}
-
-                  {proj.demoUrl && (
-                    <a
-                      href={proj.demoUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 text-text-primary hover:text-accent font-medium transition-colors group/demo"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5" />
-                      <span>{lang === 'pt' ? 'Demonstração' : 'Live Demo'}</span>
-                      <ArrowUpRight className="w-3 h-3 group-hover/demo:translate-x-0.5 group-hover/demo:-translate-y-0.5 transition-transform" />
-                    </a>
+                  {!proj.demoUrl && !proj.githubUrl && (
+                    <span className="text-text-tertiary text-[11px]">
+                      {lang === 'pt' ? 'Código Privado' : 'Proprietary'}
+                    </span>
                   )}
                 </div>
-
-                {!proj.demoUrl && !proj.githubUrl && (
-                  <span className="text-text-tertiary text-[11px]">
-                    {lang === 'pt' ? 'Código Privado' : 'Proprietary'}
-                  </span>
-                )}
-              </div>
-            </motion.article>
+              </SpotlightCard>
+            </motion.div>
           )
         })}
       </motion.div>
