@@ -7,6 +7,28 @@
 
 ## Changelog
 
+### [2026-10-27 00:44] — /phase 1 & /phase 2 — Base UI & Navbar Complete
+
+**Action:** Desenvolvida toda a infraestrutura da Fase 1 (Design Tokens, ThemeContext, I18nContext, componentes base UI) e da Fase 2 (Navbar responsivo completo).
+**Files created / modified:**
+- `src/hooks/useTheme.tsx`: hook e provider para alternância dark/light persistente em `localStorage` e atribuição de classes no `<html>`.
+- `src/hooks/useI18n.tsx`: hook e provider para bilinguismo PT/EN com persistência.
+- `src/components/ui/SectionLabel.tsx`: marcador numerado `[01]` minimalista com régua hairline.
+- `src/components/ui/Tag.tsx`: pill com hairline border no formato clean.
+- `src/components/ui/Button.tsx`: botão minimalista nos variantes `outline`, `ghost` e `solid`.
+- `src/components/ui/ThemeToggle.tsx`: botão animado com ícones `Sun`/`Moon` de 18px.
+- `src/components/ui/LangToggle.tsx`: seletor minimalista PT / EN.
+- `src/components/layout/Navbar.tsx`: barra de navegação responsiva com monograma `DS`, scroll-detect com blur translúcido, deteção de secção ativa em scroll, e overlay fullscreen no mobile.
+- `src/App.tsx`: integração e pré-visualização completa com todas as secções estruturadas.
+
+**Decisions:**
+- O Navbar utiliza blur com backdrop filter suave (`bg-bg/85 backdrop-blur-md`) e hairline border inferior ao fazer scroll.
+- No mobile, o menu fecha automaticamente ao navegar para qualquer secção e bloqueia o scroll de fundo quando aberto.
+- O ThemeToggle respeita o default dark mode solicitado pelo utilizador.
+
+**Status:** ✅ Complete  
+**Notes:** Fases 1 e 2 concluídas com sucesso e validadas pelo `npm run build`.
+
 ### [2026-10-27 00:38] — /phase 0 — Project Setup Complete
 
 **Action:** Inicializado o projeto React 19 + TypeScript + Vite 8. Instaladas e configuradas as dependências de base, styling e animação.

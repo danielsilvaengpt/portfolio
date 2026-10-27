@@ -25,28 +25,28 @@
 
 ## Phase 1 — Design Tokens & Base
 
-- [ ] Define all CSS variables in `globals.css` (dark mode + light mode)
-- [ ] Map tokens to Tailwind: extend colors in `tailwind.config.ts`
-- [ ] Create `ThemeProvider` context (dark/light toggle state)
-- [ ] Create `useTheme` hook
-- [ ] Implement theme persistence via `localStorage`
-- [ ] Apply `dark` class to `<html>` on load (no flash)
-- [ ] Create `SectionLabel` component (index + label + rule)
-- [ ] Create `Tag` component (outlined pill)
-- [ ] Create `Button` component (outlined + ghost variants)
+- [x] Define all CSS variables in `globals.css` (dark mode + light mode)
+- [x] Map tokens to Tailwind: extend colors in `tailwind.config.ts`
+- [x] Create `ThemeProvider` context (dark/light toggle state)
+- [x] Create `useTheme` hook
+- [x] Implement theme persistence via `localStorage`
+- [x] Apply `dark` class to `<html>` on load (no flash)
+- [x] Create `SectionLabel` component (index + label + rule)
+- [x] Create `Tag` component (outlined pill)
+- [x] Create `Button` component (outlined + ghost variants)
 
 ---
 
 ## Phase 2 — Navbar
 
-- [ ] Sticky top navbar, full width
-- [ ] Left: `DS` logotype (initials, bold mono)
-- [ ] Center: nav links — About · Experience · Projects · Skills · Education · Contact
-- [ ] Right: `[PT | EN]` lang toggle + theme toggle (sun/moon)
-- [ ] Mobile: hamburger → slide-down full-screen nav overlay
-- [ ] Active link detection via scroll intersection
-- [ ] Nav link hover: underline slides from left (`scaleX`)
-- [ ] Navbar background: `blur(16px)` + semi-transparent bg on scroll
+- [x] Sticky top navbar, full width
+- [x] Left: `DS` logotype (initials, bold mono)
+- [x] Center: nav links — About · Experience · Projects · Skills · Education · Contact
+- [x] Right: `[PT | EN]` lang toggle + theme toggle (sun/moon)
+- [x] Mobile: hamburger → slide-down full-screen nav overlay
+- [x] Active link detection via scroll intersection
+- [x] Nav link hover: underline slides from left (`scaleX`)
+- [x] Navbar background: `blur(16px)` + semi-transparent bg on scroll
 
 ---
 
