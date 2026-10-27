@@ -142,20 +142,20 @@
 
 ## Phase 9 — Contact Section
 
-- [ ] `SectionLabel`: `[07] CONTACT`
-- [ ] Large email CTA: `danielsilva.eng.pt@gmail.com` — clickable `mailto:`, large type, underline on hover
-- [ ] Status line: `Open to work · Based in Aveiro · Available remotely` — mono, secondary
-- [ ] Social links row: `GitHub ↗` · `LinkedIn ↗` — text links, not icon-only
-- [ ] CV download row: `Download CV (PT) ↓` · `Download CV (EN) ↓` — outlined buttons
-- [ ] No contact form (keep it direct and friction-free)
+- [x] `SectionLabel`: `[07] CONTACT`
+- [x] Large email CTA: `danielsilva.eng.pt@gmail.com` — clickable `mailto:`, large type, underline on hover
+- [x] Status line: `Open to work · Based in Aveiro · Available remotely` — mono, secondary
+- [x] Social links row: `GitHub ↗` · `LinkedIn ↗` — text links, not icon-only
+- [x] CV download row: `Download CV (PT) ↓` · `Download CV (EN) ↓` — outlined buttons
+- [x] No contact form (keep it direct and friction-free)
 
 ---
 
 ## Phase 10 — Footer
 
-- [ ] Minimal footer: `Made with ☕ by Daniel Silva · 2026` — mono, tertiary
-- [ ] Back to top link (right side): `↑ Top` — mono, secondary
-- [ ] Hairline top border
+- [x] Minimal footer: `Made with ☕ by Daniel Silva · 2026` — mono, tertiary
+- [x] Back to top link (right side): `↑ Top` — mono, secondary
+- [x] Hairline top border
 
 ---
 

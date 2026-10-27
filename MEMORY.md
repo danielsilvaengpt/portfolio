@@ -7,6 +7,20 @@
 
 ## Changelog
 
+### [2026-10-27 01:10] — /phase 9 & /phase 10 — Contact Section & Footer Complete
+
+**Action:** Desenvolvida a secção de Contacto (com tipografia de alta escala para e-mail direto, botão de cópia com um clique para a área de transferência, disponibilidade imediata, links sociais e download de CVs) e o Rodapé minimalista com botão Back to Top.
+**Files created / modified:**
+- `src/components/sections/Contact.tsx`: canal direto sem formulários pesados com atrito. E-mail `danielsilva.eng.pt@gmail.com` em destaque massivo (`text-2xl sm:text-5xl font-bold`), botão interativo `Copiar` com feedback visual imediato (`Check` icon), badge pulsante de disponibilidade para contratação, nota de flexibilidade geográfica (Aveiro, presencial, híbrido ou remoto global), links para GitHub, LinkedIn e Email, e botões de download dos CVs em PT e EN.
+- `src/components/layout/Footer.tsx`: rodapé editorial monocromático com monograma `DS`, assinatura autoral, tagline em itálico e botão de retorno ao topo com scroll suave (`window.scrollTo({ top: 0, behavior: 'smooth' })`).
+- `src/App.tsx`: integração final dos componentes em estrutura semântica `<main role="main">` e `<footer>`.
+
+**Decisions:**
+- Eliminação intencional de formulários de contacto tradicionais, que reduzem a conversão. O e-mail direto de grande impacto com botão de cópia instantâneo oferece experiência sem atrito para recrutadores e tech leads.
+
+**Status:** ✅ Complete  
+**Notes:** Fases 9 e 10 concluídas e validadas pelo `npm run build`.
+
 ### [2026-10-27 01:07] — /phase 8 — Education Section Complete
 
 **Action:** Desenvolvida a secção de Educação e Reconhecimento Académico/Profissional com divisão 7:5 (formação ISEC e Serafim Leite à esquerda; bloco dedicado à Medalha de Excelência WorldSkills Portugal 2023 à direita).
