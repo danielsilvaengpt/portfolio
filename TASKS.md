@@ -79,16 +79,16 @@
 
 ## Phase 5 — Experience Section
 
-- [ ] `SectionLabel`: `[03] EXPERIENCE`
-- [ ] Vertical timeline layout — left `1px solid var(--border)` line
-- [ ] Four experience items (most recent first):
-  - [ ] AI Engineer @ Meight (Feb 2026 – Jun 2026)
-  - [ ] Full-Stack Developer @ Internet Web Solutions — Erasmus+ (Apr–May 2023)
-  - [ ] Software Developer @ OPTIMA (Apr–Jun 2023)
-  - [ ] IT & Hardware @ OPTIMA (Jun–Jul 2022)
-- [ ] Each item: role (bold, primary) / company + period (mono, secondary) / bullet tasks (body, secondary)
-- [ ] Timeline dot (`●`) in `--accent` color
-- [ ] Items stagger-animate in from left on scroll (Framer Motion)
+- [x] `SectionLabel`: `[03] EXPERIENCE`
+- [x] Vertical timeline layout — left `1px solid var(--border)` line
+- [x] Four experience items (most recent first):
+  - [x] AI Engineer @ Meight (Feb 2026 – Jun 2026)
+  - [x] Full-Stack Developer @ Internet Web Solutions — Erasmus+ (Apr–May 2023)
+  - [x] Software Developer @ OPTIMA (Apr–Jun 2023)
+  - [x] IT & Hardware @ OPTIMA (Jun–Jul 2022)
+- [x] Each item: role (bold, primary) / company + period (mono, secondary) / bullet tasks (body, secondary)
+- [x] Timeline dot (`●`) in `--accent` color
+- [x] Items stagger-animate in from left on scroll (Framer Motion)
 
 ---
 

@@ -7,6 +7,21 @@
 
 ## Changelog
 
+### [2026-10-27 00:54] — /phase 5 — Experience Section Complete
+
+**Action:** Desenvolvida a secção de Experiência com linha de tempo vertical minimalista, dados bilingues estruturados dos 4 estágios e animação escalonada lateral via Framer Motion.
+**Files created / modified:**
+- `src/data/experience.ts`: modelo tipado `ExperienceItem` com todas as 4 experiências profissionais reais (Meight em IA/Hybrid Search, Erasmus+ em Espanha no WaterWise, OPTIMA em software CNC trigonométrico e OPTIMA em hardware industrial).
+- `src/components/sections/Experience.tsx`: timeline com linha contínua hairline, nós circulares reativos (`group-hover:scale-125 group-hover:bg-accent`), cabeçalhos com função, empresa, localização geográfica e período, marcadores de tarefas e pills de tecnologias usadas.
+- `src/App.tsx`: integração da nova secção `Experience`.
+
+**Decisions:**
+- Ordenação estritamente cronológica decrescente (da mais recente de 2026 até ao primeiro estágio em 2022).
+- Os nós da timeline mantêm-se discretos por defeito e ganham destaque e brilho suave ao focar ou passar com o cursor em cada bloco de experiência.
+
+**Status:** ✅ Complete  
+**Notes:** Phase 5 concluída e validada pelo `npm run build`.
+
 ### [2026-10-27 00:51] — /phase 4 — About Section Complete
 
 **Action:** Desenvolvida a secção Sobre Mim com layout editorial assimétrico, citação pull-quote, grelha técnica de factoids e tratamento fotográfico com hover interativo. Descarregados os assets originais (foto de perfil e CVs em PDF).
