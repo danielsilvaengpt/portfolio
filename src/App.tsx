@@ -9,37 +9,43 @@ import { Skills } from './components/sections/Skills'
 import { Education } from './components/sections/Education'
 import { Contact } from './components/sections/Contact'
 import { Footer } from './components/layout/Footer'
+import { SynapticCanvas } from './components/ui/SynapticCanvas'
 
 function PortfolioContent() {
   return (
-    <div className="min-h-screen bg-bg text-text-primary selection:bg-text-primary selection:text-bg">
-      <Navbar />
+    <div className="min-h-screen bg-bg text-text-primary selection:bg-text-primary selection:text-bg relative">
+      {/* Continuous 3D Synaptic Thread (Three.js WebGL) */}
+      <SynapticCanvas />
 
-      <main role="main">
-        {/* 01. Hero Section */}
-        <Hero />
+      <div className="relative z-10">
+        <Navbar />
 
-        {/* 02. About Section */}
-        <About />
+        <main role="main">
+          {/* 01. Hero Section */}
+          <Hero />
 
-        {/* 03. Experience Section */}
-        <Experience />
+          {/* 02. About Section */}
+          <About />
 
-        {/* 04. Projects Section */}
-        <Projects />
+          {/* 03. Experience Section */}
+          <Experience />
 
-        {/* 05. Skills Section */}
-        <Skills />
+          {/* 04. Projects Section */}
+          <Projects />
 
-        {/* 06. Education & Honors Section */}
-        <Education />
+          {/* 05. Skills Section */}
+          <Skills />
 
-        {/* 07. Contact Section */}
-        <Contact />
-      </main>
+          {/* 06. Education & Honors Section */}
+          <Education />
 
-      {/* 08. Minimalist Footer */}
-      <Footer />
+          {/* 07. Contact Section */}
+          <Contact />
+        </main>
+
+        {/* 08. Minimalist Footer */}
+        <Footer />
+      </div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { ArrowDown, FileDown } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { AgentThoughtStream } from '../ui/AgentThoughtStream'
 import { useI18n } from '../../hooks/useI18n'
 
 export const Hero: React.FC = () => {
@@ -43,7 +44,7 @@ export const Hero: React.FC = () => {
           className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-widest text-text-tertiary mb-6"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-          <span>DANIEL SILVA — PORTFOLIO 2026</span>
+          <span>DANIEL SILVA — AI & AGENTIC SYSTEMS 2026</span>
         </motion.div>
 
         {/* Large Name Display */}
@@ -66,8 +67,8 @@ export const Hero: React.FC = () => {
           className="font-mono text-sm sm:text-base md:text-lg text-text-secondary mb-3 font-normal"
         >
           {lang === 'pt'
-            ? 'Engenheiro Informático Júnior — IA & Análise de Dados'
-            : 'Junior Computer Engineer — AI & Data Analysis'}
+            ? 'Engenheiro Informático Júnior — IA, Agentes Autónomos & Dados'
+            : 'Junior Computer Engineer — AI, Autonomous Agents & Data'}
         </motion.p>
 
         {/* Tagline */}
@@ -76,10 +77,21 @@ export const Hero: React.FC = () => {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="font-mono text-xs sm:text-sm text-text-tertiary italic mb-10"
+          className="font-mono text-xs sm:text-sm text-text-tertiary italic mb-8"
         >
           {lang === 'pt' ? '“Do metal aos dados.”' : '“From metal to data.”'}
         </motion.p>
+
+        {/* Autonomous Agent Thought Stream (HUD) */}
+        <motion.div
+          custom={3.5}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="mb-10"
+        >
+          <AgentThoughtStream />
+        </motion.div>
 
         {/* Actions Row */}
         <motion.div
@@ -143,3 +155,4 @@ export const Hero: React.FC = () => {
     </section>
   )
 }
+
