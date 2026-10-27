@@ -7,6 +7,23 @@
 
 ## Changelog
 
+### [2026-10-27 01:29] — CINEMATIC FILM DIRECTION — Site-Wide Continuous Cinematic Experience
+
+**Action:** Implementada a experiência cinematográfica contínua de ponta a ponta (Ideia 1: *The Neural Chronology*), transformando o portfólio numa experiência interativa de filme de ficção científica.
+**Files created / modified:**
+- `src/components/ui/ScrambleText.tsx`: descodificador criptográfico em tempo real com caracteres matemáticos/binários (`01_#$<>[]/\\=+-*~XYZ{}ΔΛΞΠΣΩ`) que decifra o texto progressivamente ao entrar no ecrã (via IntersectionObserver) e reage interativamente ao passar o rato em todos os cabeçalhos e no nome central.
+- `src/components/ui/CinematicOverlay.tsx`: overlay de película analógica 35mm cinematográfica com textura fractal, retícula de precisão personalizada de duplo anel magnético (cursor com inércia cinemática) e telemetria de voo nos cantos do ecrã (vetores X/Y e barra percentual de progresso contínuo de fotogramas).
+- `src/components/ui/SynapticCanvas.tsx`: melhorado com física de ondas de choque holográficas tridimensionais acionadas ao clicar (`RingGeometry` com dissipação temporal), iluminação volumétrica com brilho aditivo nas partículas sinápticas e rotação cinematográfica da câmara com travelling parallax contínuo.
+- `src/components/ui/SectionLabel.tsx`: rótulos de secções numerados integram agora o descodificador dinâmico `ScrambleText`.
+- `src/components/sections/Hero.tsx`: nome massivo *Daniel Silva* decifra-se no arranque da página.
+- `src/App.tsx`: integração sem emendas de todas as camadas cinematográficas.
+
+**Decisions:**
+- A integração do cursor com atraso inercial e telemetria fixa nos cantos do ecrã ancora o utilizador como operador de um sistema avançado de IA, elevando radicalmente a perceção de sofisticação técnica e distinção visual.
+
+**Status:** ✅ Complete  
+**Notes:** Validado por `npm run build` com sucesso absoluto.
+
 ### [2026-10-27 01:23] — CINEMATIC UPGRADE — Continuous 3D Synaptic Thread & Agent HUD
 
 **Action:** Implementada a experiência cinemática interativa tridimensional contínua em Three.js WebGL e o console holográfico em tempo real "Agent Thought Stream".
