@@ -224,6 +224,22 @@
 
 ---
 
+## Phase 16 — Full Process Diagram Redesign (Spec.md v1.0)
+
+- [x] Audit against AI-look checklist (purged dark gradients, blobs, floating 3D particle mesh, card-clones)
+- [x] Implement Design Tokens: `--paper: #F4F6F8`, `--surface: #FFFFFF`, `--wash: #E4EBF4`, `--ink: #17233A`, `--process: #1B5FA6`, `--decision: #F2C94C`, `--start: #2F7A4B`, `--end: #A83A32`
+- [x] Integrate IBM Plex typography (IBM Plex Sans, IBM Plex Sans Condensed 600, IBM Plex Mono)
+- [x] Build Hero with real SVG BPMN Diagram (Horizontal desktop + Vertical mobile + accessible transcript)
+- [x] Refactor Projects as document-style table records with 1px rules and hover wash
+- [x] Build Experience and Education chronological tabular timeline
+- [x] Implement Skills grouped by practical capabilities
+- [x] Implement "A aprender agora" (Learning roadmap with transparent states)
+- [x] Implement Contact with direct email and resume download
+- [x] Verify WCAG AA contrast, skip-to-content accessibility link, tabular numbers, and clean build
+- [x] Deploy to GitHub Pages and push to GitHub `main`
+
+---
+
 ## Backlog (Nice to Have — Post-MVP)
 
 - [ ] Blog section (static MDX posts)

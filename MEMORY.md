@@ -7,6 +7,23 @@
 
 ## Changelog
 
+### [2026-11-20 15:11] — FULL REDESIGN: PROCESS DIAGRAM SPEC V1.0 IMPLEMENTATION
+
+**Action:** Implementação integral e sem desvios do `Spec.md` aprovado pelo utilizador ("O portfólio como um diagrama de processos"):
+1. **Identidade Visual & Tokens:** Fundo técnico claro (`--paper: #F4F6F8`), superfície branca (`--surface: #FFFFFF`), lavanda de tarefa (`--wash: #E4EBF4`), texto tinta (`--ink: #17233A`), régua de 1px (`--rule: #C9D1DA`), azul de processo (`--process: #1B5FA6`), âmbar de decisão (`--decision: #F2C94C`), verde de início (`--start: #2F7A4B`) e vermelho de fim (`--end: #A83A32`).
+2. **Tipografia Técnica:** IBM Plex Sans Condensed 600 nos títulos, IBM Plex Sans no corpo/interface e IBM Plex Mono no código e dados reais, com suporte local e `tabular-nums`.
+3. **Hero & Diagrama BPMN Real:** Diagrama visual interativo inline SVG representando o pipeline real de RAG / Pesquisa Híbrida (`Documentos -> Embeddings -> pgvector -> Pesquisa híbrida? -> Resposta`) com versão horizontal para desktop e vertical empilhada para mobile (<720px), animação única de desenho do traço respeitando `prefers-reduced-motion` e lista acessível para leitores de ecrã (`.sr-only`).
+4. **Projetos como Registos de Tabela:** Eliminados os cartões arredondados idênticos de IA; os projetos são agora apresentados como linhas estruturadas de documentação técnica com hover em `--wash`, links textuais sublinhados em `--process` (sem setas decorativas "→") e filtragem rigorosa por relevância.
+5. **Experiência e Formação:** Lista cronológica simples com datas à esquerda em coluna alinhada (`tabular-nums`) e conteúdo à direita.
+6. **Competências:** Agrupadas pelo que faz (Dados e IA, Sistemas e Processos, Backend e Web, Ferramentas & Fluxo) em texto limpo sem barras de percentagem.
+7. **Secção A Aprender Agora:** Secção transparente e honesta refletindo o estado real de estudo de SAP, IA Agêntica e Engenharia de Dados.
+8. **Purga da "Cara de IA":** Remoção total de fundos pretos genéricos, gradientes sintéticos, partículas 3D WebGL pesadas, animações excessivas de scroll, orbes de luz e cartões com sombras difusas.
+9. **SEO & Acessibilidade:** JSON-LD `Person`, skip link, contrastes WCAG AA estritos, foco visível com offset e `<meta name="theme-color">` adaptativo.
+
+**Status:** ✅ Complete | Build: PASS | Deploy: Ready for GitHub Pages & main push
+
+---
+
 ### [2026-11-20 14:59] — CLARIFICATION: SAP TO BE STUDIED / FUTURE SPECIALIZATION PROGRESSION
 
 **Action:** Especificação explícita de que a tecnologia/ecossistema SAP está em fase de início de estudo / progressão futura e não como competência já dominada.

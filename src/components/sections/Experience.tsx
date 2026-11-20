@@ -1,118 +1,79 @@
 import React from 'react'
-import { motion, useInView, type Variants } from 'framer-motion'
-import { SectionLabel } from '../ui/SectionLabel'
-import { Tag } from '../ui/Tag'
 import { useI18n } from '../../hooks/useI18n'
-import { EXPERIENCES } from '../../data/experience'
-import { MapPin, Calendar, Building2 } from 'lucide-react'
 
 export const Experience: React.FC = () => {
   const { lang } = useI18n()
-  const ref = React.useRef<HTMLElement>(null)
-  const isInView = useInView(ref, { once: true, margin: '-80px' })
 
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.14,
-        delayChildren: 0.1,
-      },
+  const entries = [
+    {
+      period: '2026',
+      titlePt: 'Estágio curricular — Meight',
+      titleEn: 'Engineering Internship — Meight',
+      descPt: 'Integração na equipa de dados no projeto de Pesquisa Híbrida (Hybrid Search com pgvector) e conceção de ferramenta interna de onboarding operacional.',
+      descEn: 'Collaborated on hybrid search architecture (sparse + dense retrieval on pgvector) and developed internal customer onboarding workflow tooling.',
     },
-  }
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, x: -16 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, ease: 'easeOut' },
+    {
+      period: '2023–2026',
+      titlePt: 'Licenciatura em Engenharia Informática — ISEC',
+      titleEn: 'BSc in Computer Science & Engineering — ISEC',
+      descPt: 'Ramo de Sistemas de Informação. Formação em arquitetura de bases de dados, modelação analítica, inteligência artificial e engenharia de software.',
+      descEn: 'Information Systems branch. Focus on relational and vector database architectures, analytics pipelines, artificial intelligence, and software engineering.',
     },
-  }
+    {
+      period: '2023',
+      titlePt: 'Medalha de Excelência — WorldSkills Portugal',
+      titleEn: 'Medal of Excellence — WorldSkills Portugal',
+      descPt: 'Distinção na categoria de Desenvolvimento de Aplicações Móveis no Campeonato Nacional das Profissões (WorldSkills Portugal 2023).',
+      descEn: 'National distinction in Mobile Application Development at WorldSkills Portugal Skills Competition 2023.',
+    },
+    {
+      period: '2023',
+      titlePt: 'Estágio Internacional Erasmus+ — IWS (Málaga, Espanha)',
+      titleEn: 'Erasmus+ International Internship — IWS (Málaga, Spain)',
+      descPt: 'Desenvolvimento autónomo da aplicação web WaterWise Calculator com arquitetura PHP e MySQL.',
+      descEn: 'Solo engineering of WaterWise web calculator application using PHP and MySQL.',
+    },
+    {
+      period: '2021–2022',
+      titlePt: 'Estágios Profissionais — OPTIMA',
+      titleEn: 'Professional Internships — OPTIMA',
+      descPt: 'Desenvolvimento do software Python CNC Modelling Controller e manutenção de sistemas informáticos industriais.',
+      descEn: 'Development of Python CNC Modelling Controller software and industrial infrastructure support.',
+    },
+  ]
 
   return (
-    <section
-      id="experience"
-      ref={ref}
-      className="max-w-6xl mx-auto px-6 py-28 border-t border-border select-none"
-    >
-      <SectionLabel index="02" label={lang === 'pt' ? 'Experiência' : 'Experience'} />
+    <section id="experiencia" className="py-16 sm:py-24 border-b border-rule">
+      <div className="max-w-content mx-auto px-6 lg:px-12">
+        <div className="max-w-prose mb-10">
+          <h2 className="font-condensed font-semibold text-3xl sm:text-4xl text-ink tracking-tight mb-2">
+            {lang === 'pt' ? 'Experiência e formação' : 'Experience and education'}
+          </h2>
+          <p className="text-base text-ink-muted leading-relaxed">
+            {lang === 'pt'
+              ? 'Sequência cronológica de estágios profissionais, formação académica e distinções técnicas.'
+              : 'Chronological timeline of professional internships, academic qualifications, and technical honors.'}
+          </p>
+        </div>
 
-      <div className="mb-14 max-w-2xl">
-        <p className="font-mono text-xs sm:text-sm text-text-secondary">
-          {lang === 'pt'
-            ? 'Percurso prático consolidado através de 4 estágios com forte incidência em Engenharia de IA, desenvolvimento backend e automação industrial.'
-            : 'Track record built across 4 specialized internships focusing on AI Engineering, backend system architecture, and industrial automation.'}
-        </p>
-      </div>
-
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
-        className="relative border-l border-border ml-3 sm:ml-4 space-y-12 sm:space-y-16"
-      >
-        {EXPERIENCES.map((exp) => {
-          const role = lang === 'pt' ? exp.rolePt : exp.roleEn
-          const period = lang === 'pt' ? exp.periodPt : exp.periodEn
-          const tasks = lang === 'pt' ? exp.tasksPt : exp.tasksEn
-
-          return (
-            <motion.div
-              key={exp.id}
-              variants={itemVariants}
-              className="relative pl-6 sm:pl-8 group"
-            >
-              {/* Timeline Indicator Node */}
-              <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-border border-2 border-bg group-hover:bg-accent group-hover:scale-125 transition-all duration-300" />
-
-              <div className="flex flex-col gap-3">
-                {/* Header: Role and Company info */}
-                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
-                  <h3 className="text-lg sm:text-xl font-bold tracking-tight text-text-primary group-hover:text-accent transition-colors">
-                    {role}
-                  </h3>
-                  <div className="flex items-center gap-1.5 font-mono text-xs text-text-tertiary">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{period}</span>
-                  </div>
-                </div>
-
-                {/* Subtitle: Company, Location, Type */}
-                <div className="flex flex-wrap items-center gap-y-1 gap-x-3 font-mono text-xs text-text-secondary">
-                  <span className="flex items-center gap-1 text-text-primary font-medium">
-                    <Building2 className="w-3.5 h-3.5 text-text-tertiary" />
-                    {exp.company}
-                  </span>
-                  <span className="text-border">·</span>
-                  <span className="flex items-center gap-1 text-text-tertiary">
-                    <MapPin className="w-3 h-3" />
-                    {exp.location}
-                  </span>
-                </div>
-
-                {/* Task bullets */}
-                <ul className="mt-2 space-y-2 font-mono text-xs sm:text-sm text-text-secondary leading-relaxed">
-                  {tasks.map((task, tIdx) => (
-                    <li key={tIdx} className="flex items-start gap-2.5">
-                      <span className="text-text-tertiary mt-1 select-none">―</span>
-                      <span className="flex-1">{task}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Technology Pills */}
-                <div className="pt-3 flex flex-wrap gap-1.5">
-                  {exp.tags.map((tag) => (
-                    <Tag key={tag}>{tag}</Tag>
-                  ))}
-                </div>
+        <div className="border-t border-rule divide-y divide-rule">
+          {entries.map((item, idx) => (
+            <div key={idx} className="py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8">
+              <div className="md:col-span-3 font-mono text-sm text-ink-muted tabular-nums">
+                {item.period}
               </div>
-            </motion.div>
-          )
-        })}
-      </motion.div>
+              <div className="md:col-span-9">
+                <h3 className="font-sans font-semibold text-lg text-ink mb-1">
+                  {lang === 'pt' ? item.titlePt : item.titleEn}
+                </h3>
+                <p className="text-base text-ink-muted leading-relaxed max-w-prose">
+                  {lang === 'pt' ? item.descPt : item.descEn}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

@@ -1,74 +1,48 @@
-import { ThemeProvider } from './hooks/useTheme'
 import { I18nProvider } from './hooks/useI18n'
 import { Navbar } from './components/layout/Navbar'
 import { Hero } from './components/sections/Hero'
-import { About } from './components/sections/About'
-import { Experience } from './components/sections/Experience'
 import { Projects } from './components/sections/Projects'
+import { Experience } from './components/sections/Experience'
 import { Skills } from './components/sections/Skills'
-import { Education } from './components/sections/Education'
+import { Learning } from './components/sections/Learning'
 import { Contact } from './components/sections/Contact'
 import { Footer } from './components/layout/Footer'
-import { LatentMeshCanvas } from './components/ui/LatentMeshCanvas'
-import { SectionTransition } from './components/ui/SectionTransition'
 
 function PortfolioContent() {
   return (
-    <div className="min-h-screen bg-bg text-text-primary selection:bg-text-primary selection:text-bg relative">
-      {/* Swiss Precision Latent Vector Mesh (Three.js WebGL) */}
-      <LatentMeshCanvas />
+    <div className="min-h-screen bg-paper text-ink selection:bg-wash selection:text-ink">
+      <Navbar />
 
-      <div className="relative z-10">
-        <Navbar />
+      <main id="main-content" role="main">
+        {/* 1. Hero with real BPMN architecture diagram */}
+        <Hero />
 
-        <main role="main">
-          {/* 01. Hero Section */}
-          <Hero />
+        {/* 2. Projects (Records / Data tables) */}
+        <Projects />
 
-          <SectionTransition glyph="◈" label="about" />
+        {/* 3. Experience and Education */}
+        <Experience />
 
-          {/* 02. About Section */}
-          <About />
+        {/* 4. Skills (Grouped by practical capabilities) */}
+        <Skills />
 
-          <SectionTransition glyph="◈" label="experience" />
+        {/* 5. Currently Learning (Transparent roadmap) */}
+        <Learning />
 
-          {/* 03. Experience Section */}
-          <Experience />
+        {/* 6. Contact */}
+        <Contact />
+      </main>
 
-          <SectionTransition glyph="◈" label="projects" />
-
-          {/* 04. Projects Section */}
-          <Projects />
-
-          <SectionTransition glyph="◈" label="skills" />
-
-          {/* 05. Skills Section */}
-          <Skills />
-
-          <SectionTransition glyph="◈" label="education" />
-
-          {/* 06. Education & Honors Section */}
-          <Education />
-
-          <SectionTransition glyph="◈" label="contact" />
-
-          {/* 07. Contact Section */}
-          <Contact />
-        </main>
-
-        {/* 08. Minimalist Footer */}
-        <Footer />
-      </div>
+      {/* 7. Semantic Footer */}
+      <Footer />
     </div>
   )
 }
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <I18nProvider>
-        <PortfolioContent />
-      </I18nProvider>
-    </ThemeProvider>
+    <I18nProvider>
+      <PortfolioContent />
+    </I18nProvider>
   )
 }

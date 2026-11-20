@@ -9,33 +9,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: {
-          DEFAULT: 'var(--bg)',
-          subtle: 'var(--bg-subtle)',
-          elevated: 'var(--bg-elevated)',
+        paper: 'var(--paper)',
+        surface: 'var(--surface)',
+        wash: 'var(--wash)',
+        ink: {
+          DEFAULT: 'var(--ink)',
+          muted: 'var(--ink-muted)',
         },
-        border: {
-          DEFAULT: 'var(--border)',
-          hover: 'var(--border-hover)',
-        },
-        text: {
-          primary: 'var(--text-primary)',
-          secondary: 'var(--text-secondary)',
-          tertiary: 'var(--text-tertiary)',
-        },
-        accent: {
-          DEFAULT: 'var(--accent)',
-          muted: 'var(--accent-muted)',
-        }
+        rule: 'var(--rule)',
+        process: 'var(--process)',
+        decision: 'var(--decision)',
+        start: 'var(--start)',
+        end: 'var(--end)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['"IBM Plex Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        condensed: ['"IBM Plex Sans Condensed"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
-      letterSpacing: {
-        tighter: '-0.04em',
-        tight: '-0.02em',
-        widest: '0.08em',
+      maxWidth: {
+        content: '1120px',
+        prose: '68ch',
+      },
+      borderRadius: {
+        node: '6px',
+      },
+      transitionDuration: {
+        standard: '150ms',
       }
     },
   },
