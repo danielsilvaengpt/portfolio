@@ -4,7 +4,7 @@ import { SectionLabel } from '../ui/SectionLabel'
 import { SpotlightCard } from '../ui/SpotlightCard'
 import { useI18n } from '../../hooks/useI18n'
 import { SKILL_CATEGORIES } from '../../data/skills'
-import { Terminal, Database, Cpu, Wrench } from 'lucide-react'
+import { Terminal, Database, Cpu, Wrench, LayoutGrid } from 'lucide-react'
 
 export const Skills: React.FC = () => {
   const { lang } = useI18n()
@@ -14,6 +14,7 @@ export const Skills: React.FC = () => {
   const categoryIcons: Record<string, React.ReactNode> = {
     languages: <Terminal className="w-3.5 h-3.5 text-text-tertiary" />,
     'data-ai': <Cpu className="w-3.5 h-3.5 text-text-tertiary" />,
+    'erp-is': <LayoutGrid className="w-3.5 h-3.5 text-text-tertiary" />,
     databases: <Database className="w-3.5 h-3.5 text-text-tertiary" />,
     'tools-frameworks': <Wrench className="w-3.5 h-3.5 text-text-tertiary" />,
   }
@@ -58,7 +59,7 @@ export const Skills: React.FC = () => {
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
       >
         {SKILL_CATEGORIES.map((cat) => {
           const label = lang === 'pt' ? cat.labelPt : cat.labelEn

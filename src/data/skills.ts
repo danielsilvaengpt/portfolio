@@ -48,6 +48,22 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
+    id: 'erp-is',
+    labelPt: 'ERP & SISTEMAS DE INFORMAÇÃO',
+    labelEn: 'ERP & INFORMATION SYSTEMS',
+    descriptionPt: 'Modelação de processos e sistemas empresariais',
+    descriptionEn: 'Business process modeling & enterprise systems',
+    skills: [
+      { name: 'BPMN (Process Modeling)', isPrimary: true },
+      { name: 'OML / UML', isPrimary: true },
+      { name: 'ERP Foundations', isPrimary: true },
+      { name: 'SAP (em aprendizagem)', isPrimary: true },
+      { name: 'Business Process Analysis' },
+      { name: 'Requirements Engineering' },
+      { name: 'Information Systems Design' },
+    ],
+  },
+  {
     id: 'databases',
     labelPt: 'BASES DE DADOS',
     labelEn: 'DATABASES',
@@ -71,9 +87,9 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: 'FastAPI', isPrimary: true },
       { name: 'Streamlit', isPrimary: true },
       { name: 'Git & GitHub Workflow', isPrimary: true },
+      { name: 'LangChain / AI Orchestration' },
       { name: 'Fusion 360 (CAD/3D)' },
       { name: 'AJAX / RESTful APIs' },
-      { name: 'Industrial CNC Interfaces' },
     ],
   },
 ]

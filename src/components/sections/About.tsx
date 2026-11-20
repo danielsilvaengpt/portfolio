@@ -34,7 +34,7 @@ export const About: React.FC = () => {
     {
       icon: <MapPin className="w-3.5 h-3.5 text-text-tertiary" />,
       label: lang === 'pt' ? 'LOCALIZAÇÃO' : 'LOCATION',
-      value: lang === 'pt' ? 'Aveiro, Portugal' : 'Aveiro, Portugal',
+      value: 'Aveiro, Portugal',
     },
     {
       icon: <Briefcase className="w-3.5 h-3.5 text-text-tertiary" />,
@@ -90,19 +90,19 @@ export const About: React.FC = () => {
           >
             {lang === 'pt' ? (
               <>
-                “Do trabalho de precisão mecânica com máquinas CNC ao universo da{' '}
+                {"\"Da engenharia industrial ao mundo da "}
                 <span className="text-text-primary underline decoration-border-hover decoration-1 underline-offset-4">
-                  Inteligência Artificial e Engenharia de Dados
+                  Inteligência Artificial, Sistemas de Informação e SAP
                 </span>
-                .”
+                {".\""}
               </>
             ) : (
               <>
-                “From mechanical precision work with CNC machines to the universe of{' '}
+                {"\"From industrial engineering to the world of "}
                 <span className="text-text-primary underline decoration-border-hover decoration-1 underline-offset-4">
-                  Artificial Intelligence and Data Engineering
+                  Artificial Intelligence, Information Systems and SAP
                 </span>
-                .”
+                {".\""}
               </>
             )}
           </motion.blockquote>
@@ -119,8 +119,8 @@ export const About: React.FC = () => {
             </p>
             <p>
               {lang === 'pt'
-                ? 'A minha experiência inicial em ambientes industriais ensinou-me o valor do rigor e do pensamento sistemático. Hoje foco essa capacidade em arquiteturas RAG, pipelines de dados, modelação analítica e desenvolvimento backend robusto em Python.'
-                : 'My background in industrial environments taught me the value of rigor and systematic thinking. Today, I channel that discipline into RAG architectures, data pipelines, analytical modeling, and robust backend development in Python.'}
+                ? 'O meu objetivo é construir uma carreira na interseção entre IA, Sistemas de Informação e ERP — com SAP como próxima especialização estratégica. Acredito que a IA aplicada a processos de negócio e dados empresariais é o próximo salto de produtividade organizacional. Foco atual: RAG, pipelines de dados, modelação BPMN e fundações SAP.'
+                : 'My goal is to build a career at the intersection of AI, Information Systems, and ERP — with SAP as my next strategic specialization. I believe AI applied to business processes and enterprise data is the next organizational productivity leap. Current focus: RAG, data pipelines, BPMN modeling, and SAP foundations.'}
             </p>
           </motion.div>
 
@@ -156,7 +156,6 @@ export const About: React.FC = () => {
                 className="w-full h-full object-cover object-center grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                 loading="lazy"
                 onError={(e) => {
-                  // Fallback if image fails to render
                   ;(e.target as HTMLElement).style.display = 'none'
                 }}
               />

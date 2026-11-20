@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowDown, FileDown } from 'lucide-react'
 import { Button } from '../ui/Button'
@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
         <MaskedReveal delay={0.1}>
           <div className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-widest text-text-tertiary mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            <span>DANIEL SILVA — AI & AGENTIC SYSTEMS 2026</span>
+            <span>DANIEL SILVA â€” IA Â· SISTEMAS DE INFORMAÃ‡ÃƒO Â· SAP 2026</span>
           </div>
         </MaskedReveal>
 
@@ -46,8 +46,8 @@ export const Hero: React.FC = () => {
           <MaskedReveal delay={0.35}>
             <p className="font-mono text-sm sm:text-base md:text-lg text-text-secondary font-normal">
               {lang === 'pt'
-                ? 'Engenheiro Informático Júnior — IA, Agentes Autónomos & Dados'
-                : 'Junior Computer Engineer — AI, Autonomous Agents & Data'}
+                ? 'Engenheiro InformÃ¡tico JÃºnior â€” IA, Sistemas de InformaÃ§Ã£o & SAP'
+                : 'Junior Computer Engineer â€” AI, Information Systems & SAP'}
             </p>
           </MaskedReveal>
         </div>
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
         <div className="mb-8">
           <MaskedReveal delay={0.45}>
             <p className="font-mono text-xs sm:text-sm text-text-tertiary italic">
-              {lang === 'pt' ? '“Do metal aos dados.”' : '“From metal to data.”'}
+              {lang === 'pt' ? 'â€œDo metal aos dados.â€' : 'â€œFrom metal to data.â€'}
             </p>
           </MaskedReveal>
         </div>
@@ -108,7 +108,7 @@ export const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Cinematic Ticker — scrolling tech keywords */}
+      {/* Cinematic Ticker â€” scrolling tech keywords */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -135,9 +135,10 @@ export const Hero: React.FC = () => {
         </button>
 
         <div className="hidden sm:block">
-          <span>Aveiro, Portugal · 40.6405° N, 8.6538° W</span>
+          <span>Aveiro, Portugal Â· 40.6405Â° N, 8.6538Â° W</span>
         </div>
       </motion.div>
     </section>
   )
 }
+

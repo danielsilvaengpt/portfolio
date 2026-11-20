@@ -57,10 +57,29 @@ export const PROJECTS: ProjectItem[] = [
     typeEn: 'Academic Project (Information Systems II)',
   },
   {
+    id: 'bpm',
+    categoryPt: 'Modelação de Processos · ERP',
+    categoryEn: 'Process Modeling · ERP',
+    title: 'Business Process Modeling',
+    taglinePt: 'Modelação BPMN & OML de processos organizacionais com fundações para ERP',
+    taglineEn: 'BPMN & OML organizational process modeling with ERP system foundations',
+    descriptionPt:
+      'Conjunto de projetos de modelação de processos de negócio e organizacionais utilizando BPMN (Business Process Model and Notation) e OML (Object Modeling Language). Inclui diagramas completos, documentação técnica e relatórios detalhados que estabelecem as bases para sistemas ERP e de Informação empresariais. Integra princípios de análise de requisitos, fluxo de dados e alinhamento de processos com estratégia organizacional.',
+    descriptionEn:
+      'A collection of business process and organizational modeling projects using BPMN and OML notation standards. Covers end-to-end process documentation, technical diagrams, and comprehensive reports that form the analytical foundation for ERP and Information System implementations. Applies requirements analysis, data-flow mapping, and process-to-strategy alignment methodologies.',
+    stack: ['BPMN', 'OML', 'Process Analysis', 'ERP Foundations', 'Technical Documentation', 'UML'],
+    flowPt: 'Levantamento de Requisitos → Modelação BPMN/OML → Diagramas de Processo → Documentação Técnica → Base para ERP/SI',
+    flowEn: 'Requirements Gathering → BPMN/OML Modeling → Process Diagrams → Technical Documentation → ERP/IS Foundation',
+    githubUrl: 'https://github.com/danielsilvaengpt/Business-Process-Modeling',
+    isFeatured: true,
+    typePt: 'Projeto Académico / Análise de Sistemas',
+    typeEn: 'Academic Project / Systems Analysis',
+  },
+  {
     id: 'dermoscan',
     categoryPt: 'Deep Learning · Visão Computacional',
     categoryEn: 'Deep Learning · Computer Vision',
-    title: 'DermoScan AI — Classificador de Doenças de Pele',
+    title: 'DermoScan AI – Classificador de Doenças de Pele',
     taglinePt: 'Diagnóstico precoce de lesões dermatológicas com Transfer Learning',
     taglineEn: 'Early detection of dermatological conditions using Transfer Learning',
     descriptionPt:
