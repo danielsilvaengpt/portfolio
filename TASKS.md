@@ -219,6 +219,7 @@
 - [x] Update About text: "Foco atual: IA, pipelines de dados e fundações SAP."
 - [x] Add Mise Recipe Agents project (`danielsilvaengpt/mise-recipe-agents`)
 - [x] Update index.html SEO titles and Open Graph meta tags
+- [x] Clarify in About and Skills that SAP is in study / learning progression phase
 - [x] Build, commit, and deploy updates to `main` and `gh-pages`
 
 ---

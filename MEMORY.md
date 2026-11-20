@@ -7,6 +7,18 @@
 
 ## Changelog
 
+### [2026-11-20 14:59] — CLARIFICATION: SAP TO BE STUDIED / FUTURE SPECIALIZATION PROGRESSION
+
+**Action:** Especificação explícita de que a tecnologia/ecossistema SAP está em fase de início de estudo / progressão futura e não como competência já dominada.
+**Files created / modified:**
+- `src/components/sections/About.tsx`: Clarificado no texto que a especialização em SAP está em fase de início de estudo, certificação e preparação de fundações.
+- `src/data/skills.ts`: Atualizado o item de skill para `SAP (início de estudo / progressão)`.
+- `MEMORY.md` & `TASKS.md`: Documentação e changelog sincronizados com o repositório.
+
+**Status:** ✅ Complete | Build: PASS | Deploy: Published to GitHub Pages & Remote `main`
+
+---
+
 ### [2026-11-20 14:55] — FIX: ENCODING MOJIBAKE + ADD MISE-RECIPE-AGENTS + UPDATE ABOUT FOCUS
 
 **Action:** Correção cirúrgica de caracteres corrompidos (mojibake) no Hero, atualização precisa do foco profissional na secção About e integração do novo projeto de IA Agêntica `danielsilvaengpt/mise-recipe-agents`.

@@ -57,7 +57,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: 'BPMN (Process Modeling)', isPrimary: true },
       { name: 'OML / UML', isPrimary: true },
       { name: 'ERP Foundations', isPrimary: true },
-      { name: 'SAP (em aprendizagem)', isPrimary: true },
+      { name: 'SAP (início de estudo / progressão)', isPrimary: true },
       { name: 'Business Process Analysis' },
       { name: 'Requirements Engineering' },
       { name: 'Information Systems Design' },
