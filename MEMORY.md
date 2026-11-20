@@ -7,6 +7,25 @@
 
 ## Changelog
 
+### [2026-11-20 15:20] — RECURRENT ANIMATION SYSTEM: CONCEPT 1 "THE LIVE PIPELINE"
+
+**Action:** Implementação do sistema de animação e estilo recorrente em todo o portfólio (Conceito 1 — "O Fio de Processo / The Live Pipeline"):
+1. **Trilho Vertical Interativo (`ProcessSpine`):** Linha fina de 1px a percorrer o site de alto a baixo, preenchendo-se a azul `--process` conforme o utilizador faz scroll, com uma partícula de dados viva (`ping`) que percorre o trilho visual em tempo real.
+2. **Nós de Estado BPMN em Todas as Secções (`SectionProcessNode`):** Cada secção encabeçada por um nó de notação BPMN com pulso suave e identificador de telemetria:
+   - Hero: `01 // EXEC` [Início ●]
+   - Projetos: `02 // BUILD` [Nó de Execução ▭]
+   - Experiência: `03 // LOG` [Histórico Operacional ▭]
+   - Competências: `04 // DATA` [Parâmetros Técnicos ⊞]
+   - A aprender: `05 // ROADMAP` [Ponto de Decisão/Branching ◇]
+   - Contacto: `06 // OUTPUT` [Fim do Processo / Ligação ◉]
+3. **Diagrama BPMN Interativo com Tooltips Técnicos:** Os nós do diagrama no Hero agora reagem ao rato (`node-interactive`), exibindo telemetria em tempo real no rodapé do diagrama (explicações técnicas de chunking, pgvector, BM25 + dense re-ranking).
+4. **Interação Especular nos Projetos:** Cada registo de projeto ativa uma borda esquerda de 2px a `--process` e fundo `--wash` ao passar o cursor, com código de projeto identificador `[meight-rag]`, `[mise-recipe-agents]`, etc.
+5. **Harmonia Total:** Animações cirúrgicas, a 60 FPS, sem bibliotecas pesadas de terceiros nem artifícios sintéticos de IA.
+
+**Status:** ✅ Complete | Build: PASS | Deploy: Ready for GitHub Pages & main push
+
+---
+
 ### [2026-11-20 15:11] — FULL REDESIGN: PROCESS DIAGRAM SPEC V1.0 IMPLEMENTATION
 
 **Action:** Implementação integral e sem desvios do `Spec.md` aprovado pelo utilizador ("O portfólio como um diagrama de processos"):

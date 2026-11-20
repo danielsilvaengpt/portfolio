@@ -1,6 +1,7 @@
 ﻿import React from 'react'
 import { useI18n } from '../../hooks/useI18n'
 import { BpmnDiagram } from '../ui/BpmnDiagram'
+import { SectionProcessNode } from '../ui/SectionProcessNode'
 
 export const Hero: React.FC = () => {
   const { lang } = useI18n()
@@ -8,6 +9,13 @@ export const Hero: React.FC = () => {
   return (
     <section className="pt-16 pb-12 sm:pt-20 sm:pb-16 border-b border-rule">
       <div className="max-w-content mx-auto px-6 lg:px-12">
+        {/* Section Process Node: Start */}
+        <SectionProcessNode
+          type="start"
+          tag="01 // EXEC"
+          label={lang === 'pt' ? 'INÍCIO DO PROCESSO' : 'PROCESS START'}
+        />
+
         {/* Name and Persona */}
         <div className="max-w-prose mb-8">
           <h1 className="font-condensed font-semibold text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight mb-3">
@@ -27,7 +35,7 @@ export const Hero: React.FC = () => {
         <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-12">
           <a
             href="#projetos"
-            className="inline-flex items-center justify-center px-6 h-11 bg-process text-white rounded-node font-medium text-sm hover:opacity-95 transition-opacity duration-standard"
+            className="inline-flex items-center justify-center px-6 h-11 bg-process text-white rounded-node font-medium text-sm hover:opacity-95 transition-opacity duration-standard shadow-sm"
           >
             {lang === 'pt' ? 'Ver projetos' : 'Explore projects'}
           </a>

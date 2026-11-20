@@ -2,18 +2,26 @@ import React, { useEffect, useState } from 'react'
 
 export const BpmnDiagram: React.FC = () => {
   const [shouldAnimate, setShouldAnimate] = useState(false)
+  const [hoveredNode, setHoveredNode] = useState<string | null>(null)
 
   useEffect(() => {
-    // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (!prefersReducedMotion) {
       setShouldAnimate(true)
     }
   }, [])
 
+  const tooltips: Record<string, string> = {
+    docs: 'Ingestão de manuais técnicos industriais, documentação de processos e PDFs não estruturados.',
+    embeddings: 'Conversão semântica em vetores densos (modelo all-MiniLM-L6-v2 / OpenAI) com chunking adaptativo.',
+    pgvector: 'Base relacional PostgreSQL com extensão pgvector para cálculo de similaridade de cosseno a alta velocidade.',
+    hybrid: 'Combinação determinística de BM25 (palavras-chave esparsas) com ranking semântico denso.',
+    response: 'Contextualização em tempo real fornecida ao LLM para respostas sem alucinação e com citação direta.',
+  }
+
   return (
     <div className="w-full my-6 bg-surface border border-rule p-4 sm:p-6" role="region" aria-label="Diagrama de fluxo do sistema">
-      {/* Screen-reader accessible transcript of the BPMN workflow */}
+      {/* Screen-reader accessible transcript */}
       <ol className="sr-only">
         <li>Início do processo</li>
         <li>Documentos técnicos ou manuais (Entrada)</li>
@@ -24,7 +32,7 @@ export const BpmnDiagram: React.FC = () => {
         <li>Fim do fluxo</li>
       </ol>
 
-      <div className="w-full overflow-x-auto">
+      <div className="w-full overflow-x-auto relative">
         {/* Desktop and Tablet Flow: Horizontal BPMN (viewBox 0 0 1000 170) */}
         <svg
           viewBox="0 0 1000 170"
@@ -61,66 +69,93 @@ export const BpmnDiagram: React.FC = () => {
                   stroke-dashoffset: ${shouldAnimate ? '0' : '0'};
                   animation: ${shouldAnimate ? 'drawPath 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards' : 'none'};
                 }
+                .node-interactive {
+                  cursor: pointer;
+                  transition: transform 0.15s ease, filter 0.15s ease;
+                }
+                .node-interactive:hover {
+                  filter: brightness(0.96);
+                }
                 @keyframes drawPath {
                   from { stroke-dashoffset: 200; }
                   to { stroke-dashoffset: 0; }
+                }
+                @keyframes packetFlow {
+                  0% { offset-distance: 0%; opacity: 0; }
+                  15% { opacity: 1; }
+                  85% { opacity: 1; }
+                  100% { offset-distance: 100%; opacity: 0; }
                 }
               `}
             </style>
           </defs>
 
           {/* 1. Start Event (Green Circle) */}
-          <circle cx="45" cy="85" r="18" fill="var(--paper)" stroke="var(--start)" strokeWidth="2" />
-          <circle cx="45" cy="85" r="9" fill="var(--start)" />
-          <text x="45" y="125" textAnchor="middle" className="font-sans text-[12px] font-medium fill-ink-muted">Início</text>
+          <g className="node-interactive" onMouseEnter={() => setHoveredNode('start')} onMouseLeave={() => setHoveredNode(null)}>
+            <circle cx="45" cy="85" r="18" fill="var(--paper)" stroke="var(--start)" strokeWidth="2" />
+            <circle cx="45" cy="85" r="9" fill="var(--start)" className="animate-pulse" />
+            <text x="45" y="125" textAnchor="middle" className="font-sans text-[12px] font-medium fill-ink-muted">Início</text>
+          </g>
 
           {/* Flow 1 */}
           <path d="M 65 85 L 115 85" className="flow-arrow flow-animated" />
 
           {/* 2. Task: Documentos */}
-          <rect x="120" y="55" width="130" height="60" rx="6" fill="var(--wash)" stroke="var(--ink)" strokeWidth="1.5" />
-          <text x="185" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">Documentos</text>
-          <text x="185" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">PDF / Texto</text>
+          <g className="node-interactive" onMouseEnter={() => setHoveredNode('docs')} onMouseLeave={() => setHoveredNode(null)}>
+            <rect x="120" y="55" width="130" height="60" rx="6" fill={hoveredNode === 'docs' ? 'var(--paper)' : 'var(--wash)'} stroke="var(--ink)" strokeWidth={hoveredNode === 'docs' ? 2 : 1.5} />
+            <text x="185" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">Documentos</text>
+            <text x="185" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">PDF / Texto</text>
+          </g>
 
           {/* Flow 2 */}
           <path d="M 250 85 L 305 85" className="flow-arrow flow-animated" />
 
           {/* 3. Task: Embeddings */}
-          <rect x="310" y="55" width="130" height="60" rx="6" fill="var(--wash)" stroke="var(--ink)" strokeWidth="1.5" />
-          <text x="375" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">Embeddings</text>
-          <text x="375" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">Vetores Densos</text>
+          <g className="node-interactive" onMouseEnter={() => setHoveredNode('embeddings')} onMouseLeave={() => setHoveredNode(null)}>
+            <rect x="310" y="55" width="130" height="60" rx="6" fill={hoveredNode === 'embeddings' ? 'var(--paper)' : 'var(--wash)'} stroke="var(--ink)" strokeWidth={hoveredNode === 'embeddings' ? 2 : 1.5} />
+            <text x="375" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">Embeddings</text>
+            <text x="375" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">Vetores Densos</text>
+          </g>
 
           {/* Flow 3 */}
           <path d="M 440 85 L 495 85" className="flow-arrow flow-animated" />
 
           {/* 4. Task: pgvector */}
-          <rect x="500" y="55" width="130" height="60" rx="6" fill="var(--wash)" stroke="var(--ink)" strokeWidth="1.5" />
-          <text x="565" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">pgvector</text>
-          <text x="565" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">PostgreSQL</text>
+          <g className="node-interactive" onMouseEnter={() => setHoveredNode('pgvector')} onMouseLeave={() => setHoveredNode(null)}>
+            <rect x="500" y="55" width="130" height="60" rx="6" fill={hoveredNode === 'pgvector' ? 'var(--paper)' : 'var(--wash)'} stroke="var(--ink)" strokeWidth={hoveredNode === 'pgvector' ? 2 : 1.5} />
+            <text x="565" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">pgvector</text>
+            <text x="565" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">PostgreSQL</text>
+          </g>
 
           {/* Flow 4 */}
           <path d="M 630 85 L 675 85" className="flow-arrow flow-animated" />
 
           {/* 5. Decision: Pesquisa Híbrida (Rhombus) */}
-          <polygon points="720,45 765,85 720,125 675,85" fill="var(--decision)" stroke="var(--ink)" strokeWidth="1.5" />
-          <text x="720" y="82" textAnchor="middle" className="font-sans text-[11px] font-semibold fill-ink">Pesquisa</text>
-          <text x="720" y="95" textAnchor="middle" className="font-sans text-[11px] font-semibold fill-ink">híbrida?</text>
+          <g className="node-interactive" onMouseEnter={() => setHoveredNode('hybrid')} onMouseLeave={() => setHoveredNode(null)}>
+            <polygon points="720,45 765,85 720,125 675,85" fill="var(--decision)" stroke="var(--ink)" strokeWidth={hoveredNode === 'hybrid' ? 2.5 : 1.5} />
+            <text x="720" y="82" textAnchor="middle" className="font-sans text-[11px] font-semibold fill-ink">Pesquisa</text>
+            <text x="720" y="95" textAnchor="middle" className="font-sans text-[11px] font-semibold fill-ink">híbrida?</text>
+          </g>
 
           {/* Flow 5 */}
           <path d="M 765 85 L 815 85" className="flow-arrow flow-animated" />
 
           {/* 6. Task: Resposta */}
-          <rect x="820" y="55" width="115" height="60" rx="6" fill="var(--wash)" stroke="var(--ink)" strokeWidth="1.5" />
-          <text x="877" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">Resposta</text>
-          <text x="877" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">Contexto RAG</text>
+          <g className="node-interactive" onMouseEnter={() => setHoveredNode('response')} onMouseLeave={() => setHoveredNode(null)}>
+            <rect x="820" y="55" width="115" height="60" rx="6" fill={hoveredNode === 'response' ? 'var(--paper)' : 'var(--wash)'} stroke="var(--ink)" strokeWidth={hoveredNode === 'response' ? 2 : 1.5} />
+            <text x="877" y="83" textAnchor="middle" className="font-sans text-[13px] font-medium fill-ink">Resposta</text>
+            <text x="877" y="99" textAnchor="middle" className="font-mono text-[11px] fill-ink-muted">Contexto RAG</text>
+          </g>
 
           {/* Flow 6 */}
           <path d="M 935 85 L 955 85" className="flow-arrow flow-animated" />
 
           {/* 7. End Event (Red Double Circle) */}
-          <circle cx="975" cy="85" r="17" fill="var(--paper)" stroke="var(--end)" strokeWidth="3" />
-          <circle cx="975" cy="85" r="9" fill="var(--end)" />
-          <text x="975" y="125" textAnchor="middle" className="font-sans text-[12px] font-medium fill-ink-muted">Fim</text>
+          <g className="node-interactive" onMouseEnter={() => setHoveredNode('end')} onMouseLeave={() => setHoveredNode(null)}>
+            <circle cx="975" cy="85" r="17" fill="var(--paper)" stroke="var(--end)" strokeWidth="3" />
+            <circle cx="975" cy="85" r="9" fill="var(--end)" />
+            <text x="975" y="125" textAnchor="middle" className="font-sans text-[12px] font-medium fill-ink-muted">Fim</text>
+          </g>
         </svg>
 
         {/* Mobile Flow (< 720px): Vertical BPMN Diagram */}
@@ -132,7 +167,7 @@ export const BpmnDiagram: React.FC = () => {
         >
           {/* Start */}
           <circle cx="140" cy="30" r="16" fill="var(--paper)" stroke="var(--start)" strokeWidth="2" />
-          <circle cx="140" cy="30" r="8" fill="var(--start)" />
+          <circle cx="140" cy="30" r="8" fill="var(--start)" className="animate-pulse" />
 
           {/* Arrow 1 */}
           <line x1="140" y1="46" x2="140" y2="76" stroke="var(--process)" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
@@ -183,9 +218,19 @@ export const BpmnDiagram: React.FC = () => {
         </svg>
       </div>
 
-      <div className="mt-3 pt-3 border-t border-rule text-xs font-mono text-ink-muted flex items-center justify-between">
-        <span>FIG. 01 — FLUXO ARQUITETURAL DE PESQUISA HÍBRIDA (BPMN NOTATION)</span>
-        <span className="hidden sm:inline">RAG & EMBEDDINGS</span>
+      {/* Dynamic Telemetry / Tooltip Footer */}
+      <div className="mt-3 pt-3 border-t border-rule text-xs font-mono text-ink-muted flex flex-col sm:flex-row items-baseline sm:items-center justify-between gap-1">
+        <div className="flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-start animate-ping" />
+          <span>
+            {hoveredNode && tooltips[hoveredNode]
+              ? tooltips[hoveredNode]
+              : 'FIG. 01 — FLUXO ARQUITETURAL DE PESQUISA HÍBRIDA (PASSE O RATO SOBRE OS NÓS)'}
+          </span>
+        </div>
+        <span className="text-[11px] text-ink-muted hidden sm:inline tabular-nums">
+          STATUS: ONLINE // 60 FPS
+        </span>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useI18n } from '../../hooks/useI18n'
+import { SectionProcessNode } from '../ui/SectionProcessNode'
 
 export const Contact: React.FC = () => {
   const { lang } = useI18n()
@@ -7,6 +8,13 @@ export const Contact: React.FC = () => {
   return (
     <section id="contacto" className="py-16 sm:py-24 border-b border-rule">
       <div className="max-w-content mx-auto px-6 lg:px-12">
+        {/* Section Process Node: End Event / Output Node */}
+        <SectionProcessNode
+          type="end"
+          tag="06 // OUTPUT"
+          label={lang === 'pt' ? 'FIM DO PROCESSO / LIGAÇÃO' : 'PROCESS END / OUTCOME'}
+        />
+
         <div className="max-w-prose mb-8">
           <h2 className="font-condensed font-semibold text-3xl sm:text-4xl text-ink tracking-tight mb-3">
             {lang === 'pt' ? 'Contacto' : 'Contact'}
@@ -27,7 +35,7 @@ export const Contact: React.FC = () => {
         <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-4">
           <a
             href="mailto:danielsilva.eng.pt@gmail.com"
-            className="inline-flex items-center justify-center px-6 h-11 bg-process text-white rounded-node font-medium text-sm hover:opacity-95 transition-opacity duration-standard"
+            className="inline-flex items-center justify-center px-6 h-11 bg-process text-white rounded-node font-medium text-sm hover:opacity-95 transition-opacity duration-standard shadow-sm"
           >
             {lang === 'pt' ? 'Enviar email' : 'Send email'}
           </a>

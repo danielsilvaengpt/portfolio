@@ -7,14 +7,18 @@ import { Skills } from './components/sections/Skills'
 import { Learning } from './components/sections/Learning'
 import { Contact } from './components/sections/Contact'
 import { Footer } from './components/layout/Footer'
+import { ProcessSpine } from './components/ui/ProcessSpine'
 
 function PortfolioContent() {
   return (
-    <div className="min-h-screen bg-paper text-ink selection:bg-wash selection:text-ink">
+    <div className="min-h-screen bg-paper text-ink selection:bg-wash selection:text-ink relative">
+      {/* Interactive Process Pipeline Spine connecting Header to Footer */}
+      <ProcessSpine />
+
       <Navbar />
 
-      <main id="main-content" role="main">
-        {/* 1. Hero with real BPMN architecture diagram */}
+      <main id="main-content" role="main" className="relative z-10">
+        {/* 1. Hero with interactive BPMN architecture diagram */}
         <Hero />
 
         {/* 2. Projects (Records / Data tables) */}

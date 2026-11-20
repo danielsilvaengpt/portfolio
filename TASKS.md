@@ -240,6 +240,17 @@
 
 ---
 
+## Phase 17 — Recurrent Process Spine & Interactive Nodes (Concept 1)
+
+- [x] Build and test `ProcessSpine` component with vertical scroll progress and live data-packet particle
+- [x] Build and integrate `SectionProcessNode` across all 6 sections (Start, Task, Log, Data, Decision, End)
+- [x] Enhance `BpmnDiagram` with interactive hover states and technical telemetry tooltip display
+- [x] Add project hover indicator lines with technical IDs `[proj.id]`
+- [x] Verify 60 FPS performance, lightweight bundle (<270KB JS), and responsive layout on all devices
+- [x] Push to GitHub `main` and deploy to GitHub Pages
+
+---
+
 ## Backlog (Nice to Have — Post-MVP)
 
 - [ ] Blog section (static MDX posts)

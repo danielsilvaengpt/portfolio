@@ -1,5 +1,6 @@
 import React from 'react'
 import { useI18n } from '../../hooks/useI18n'
+import { SectionProcessNode } from '../ui/SectionProcessNode'
 
 export const Experience: React.FC = () => {
   const { lang } = useI18n()
@@ -45,6 +46,13 @@ export const Experience: React.FC = () => {
   return (
     <section id="experiencia" className="py-16 sm:py-24 border-b border-rule">
       <div className="max-w-content mx-auto px-6 lg:px-12">
+        {/* Section Process Node: Timeline / History */}
+        <SectionProcessNode
+          type="task"
+          tag="03 // LOG"
+          label={lang === 'pt' ? 'HISTÓRICO OPERACIONAL' : 'OPERATIONAL HISTORY'}
+        />
+
         <div className="max-w-prose mb-10">
           <h2 className="font-condensed font-semibold text-3xl sm:text-4xl text-ink tracking-tight mb-2">
             {lang === 'pt' ? 'Experiência e formação' : 'Experience and education'}
@@ -58,7 +66,7 @@ export const Experience: React.FC = () => {
 
         <div className="border-t border-rule divide-y divide-rule">
           {entries.map((item, idx) => (
-            <div key={idx} className="py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8">
+            <div key={idx} className="py-6 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 hover:bg-wash/50 transition-colors duration-standard px-3 -mx-3">
               <div className="md:col-span-3 font-mono text-sm text-ink-muted tabular-nums">
                 {item.period}
               </div>
