@@ -7,6 +7,22 @@
 
 ## Changelog
 
+### [2026-11-20 14:55] — FIX: ENCODING MOJIBAKE + ADD MISE-RECIPE-AGENTS + UPDATE ABOUT FOCUS
+
+**Action:** Correção cirúrgica de caracteres corrompidos (mojibake) no Hero, atualização precisa do foco profissional na secção About e integração do novo projeto de IA Agêntica `danielsilvaengpt/mise-recipe-agents`.
+**Files created / modified:**
+- `src/components/sections/Hero.tsx`: Corrigido o encoding UTF-8 do badge e título profissional ("Engenheiro Informático Júnior — IA, Sistemas de Informação & SAP"), eliminando caracteres corrompidos (`InformÃ¡tico JÃºnior`).
+- `src/components/sections/About.tsx`: Ajustado o texto final do objetivo: `"Foco atual: IA, pipelines de dados e fundações SAP."` / `"Current focus: AI, data pipelines, and SAP foundations."`.
+- `index.html`: Atualizado o `<title>`, meta tags de descrição, Open Graph e Twitter Cards para refletir a nova identidade de IA, Sistemas de Informação & SAP.
+- `src/locales/pt.json` & `src/locales/en.json`: Atualizados os papéis e taglines em ambas as línguas.
+- `src/data/projects.ts`: Adicionado o projeto `Mise — Receitas com IA & Brigada Agêntica` com link para `https://github.com/danielsilvaengpt/mise-recipe-agents`, destacando a metodologia Agentic Vibe Coding, CDD e orquestração multi-agente (CrewAI / React 19).
+- `src/components/sections/Projects.tsx`: Atualizada a frase introdutória dos projetos para refletir o novo portfólio de projetos selecionados.
+- `MEMORY.md` & `TASKS.md`: Documentação atualizada e sincronizada com o repositório.
+
+**Status:** ✅ Complete | Build: PASS | Deploy: Published to GitHub Pages & Remote `main`
+
+---
+
 ### [2026-11-20 14:45] — PIVOT: AI, INFORMATION SYSTEMS & SAP + NEW BPM REPO PROJECT
 
 **Action:** Ajustada a trajetória profissional e perfil do portfólio para posicionamento em **Inteligência Artificial, Sistemas de Informação e ERP/SAP (em aprendizagem)**, adicionando o projeto de Modelação de Processos de Negócio ligado ao GitHub.

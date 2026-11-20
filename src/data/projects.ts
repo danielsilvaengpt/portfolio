@@ -19,6 +19,25 @@ export interface ProjectItem {
 
 export const PROJECTS: ProjectItem[] = [
   {
+    id: 'mise-recipe-agents',
+    categoryPt: 'IA Agêntica · Orquestração de Agentes',
+    categoryEn: 'Agentic AI · Multi-Agent Orchestration',
+    title: 'Mise — Receitas com IA & Brigada Agêntica',
+    taglinePt: 'Orquestração multi-agente inteligente para criação de receitas a partir da despensa real',
+    taglineEn: 'Intelligent multi-agent orchestration generating recipes from real home pantries',
+    descriptionPt:
+      'Sistema agêntico concebido como uma brigada inteligente de cozinha que gera receitas baseadas nos ingredientes reais da despensa, identificando com honestidade os itens em falta. Desenvolvido com metodologia de Agentic Vibe Coding e CDD (Context-Driven Development), inclui landing page cinematográfica de alta fidelidade sensorial e arquitetura preparada para backend Python com CrewAI e FastAPI.',
+    descriptionEn:
+      'Agentic AI kitchen brigade generating tailored recipes strictly from available household pantry items, transparently distinguishing existing ingredients from missing staples. Built via Context-Driven Development (CDD) and Agentic Vibe Coding, featuring a high-fidelity tactile web application and a multi-agent backend architecture designed for CrewAI and FastAPI.',
+    stack: ['Agentic AI', 'CrewAI', 'React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'FastAPI', 'Python'],
+    flowPt: 'Despensa do Utilizador → Brigada Agêntica (Chef, Redator, Revisor) → Avaliação de Faltas → Receita Estruturada',
+    flowEn: 'User Pantry → Agent Brigade (Chef, Writer, Reviewer) → Missing Items Audit → Structured Recipe Markdown',
+    githubUrl: 'https://github.com/danielsilvaengpt/mise-recipe-agents',
+    isFeatured: true,
+    typePt: 'Projeto Pessoal / IA Agêntica',
+    typeEn: 'Personal Project / Agentic AI',
+  },
+  {
     id: 'industria',
     categoryPt: 'Inteligência Artificial · RAG',
     categoryEn: 'Artificial Intelligence · RAG',

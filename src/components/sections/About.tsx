@@ -119,8 +119,8 @@ export const About: React.FC = () => {
             </p>
             <p>
               {lang === 'pt'
-                ? 'O meu objetivo é construir uma carreira na interseção entre IA, Sistemas de Informação e ERP — com SAP como próxima especialização estratégica. Acredito que a IA aplicada a processos de negócio e dados empresariais é o próximo salto de produtividade organizacional. Foco atual: RAG, pipelines de dados, modelação BPMN e fundações SAP.'
-                : 'My goal is to build a career at the intersection of AI, Information Systems, and ERP — with SAP as my next strategic specialization. I believe AI applied to business processes and enterprise data is the next organizational productivity leap. Current focus: RAG, data pipelines, BPMN modeling, and SAP foundations.'}
+                ? 'O meu objetivo é construir uma carreira na interseção entre IA, Sistemas de Informação e ERP — com SAP como próxima especialização estratégica. Acredito que a IA aplicada a processos de negócio e dados empresariais é o próximo salto de produtividade organizacional. Foco atual: IA, pipelines de dados e fundações SAP.'
+                : 'My goal is to build a career at the intersection of AI, Information Systems, and ERP — with SAP as my next strategic specialization. I believe AI applied to business processes and enterprise data is the next organizational productivity leap. Current focus: AI, data pipelines, and SAP foundations.'}
             </p>
           </motion.div>
 

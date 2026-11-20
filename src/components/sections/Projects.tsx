@@ -61,8 +61,8 @@ export const Projects: React.FC = () => {
       <div className="mb-14 max-w-2xl">
         <p className="font-mono text-xs sm:text-sm text-text-secondary leading-relaxed">
           {lang === 'pt'
-            ? 'Seleção de 5 projetos desenvolvidos entre sistemas autónomos de IA, engenharia analítica de dados e automação industrial.'
-            : 'Curated index of 5 engineering projects spanning autonomous AI retrieval, data warehousing, deep learning, and industrial automation.'}
+            ? 'Seleção de projetos desenvolvidos entre sistemas agênticos de IA, arquiteturas RAG, modelação de processos (ERP), análise de dados e automação industrial.'
+            : 'Curated index of engineering projects spanning agentic AI, RAG architectures, business process modeling (ERP), data warehousing, and industrial automation.'}
         </p>
       </div>
 

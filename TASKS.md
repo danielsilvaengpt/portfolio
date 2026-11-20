@@ -215,6 +215,10 @@
 - [x] Add 5th Skill Category: ERP & Sistemas de Informação (BPMN, OML, ERP, SAP learning)
 - [x] Update narrative and pull-quotes in About section
 - [x] Update Parallax Ticker keywords with ERP/SAP/BPMN
+- [x] Fix UTF-8 encoding mojibake in Hero title and badge
+- [x] Update About text: "Foco atual: IA, pipelines de dados e fundações SAP."
+- [x] Add Mise Recipe Agents project (`danielsilvaengpt/mise-recipe-agents`)
+- [x] Update index.html SEO titles and Open Graph meta tags
 - [x] Build, commit, and deploy updates to `main` and `gh-pages`
 
 ---
