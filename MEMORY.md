@@ -7,6 +7,13 @@
 
 ## Changelog
 
+### [2026-11-20 15:54] — REMOÇÃO DE PROJETOS INTERNOS DA GRELHA DE PROJETOS
+
+**Action:** Remoção dos itens de trabalho interno da empresa Meight ("Pesquisa híbrida e embeddings vetoriais (Meight)" e "Ferramenta de onboarding operacional de clientes") da secção de Projetos Selecionados (`PROJECTS` em `src/data/projects.ts`), mantendo-os devidamente enquadrados na secção de Experiência Profissional (Estágio Curricular Meight). A grelha de projetos passa a focar os 5 projetos com repositórios autónomos e código aberto (Mise, CNC Controller, Business Process Modeling, BI Figueira da Foz, DermoScan AI).
+**Status:** ✅ Complete | Build: PASS | Deploy: Ready for GitHub Pages & main push
+
+---
+
 ### [2026-11-20 15:33] — DIREÇÃO A: DARK ENTERPRISE LUXURY / LINEAR STUDIO & ENCODING VERIFICATION
 
 **Action:** Transição completa para o estilo **Direção A ("Dark Enterprise Luxury / Linear Studio")** e validação cirúrgica de encoding UTF-8 sem mojibake:

@@ -19,8 +19,8 @@ export const Projects: React.FC = () => {
           </h2>
           <p className="text-base text-text-secondary leading-relaxed">
             {lang === 'pt'
-              ? 'Registo de sistemas desenvolvidos entre IA agêntica, arquiteturas RAG, modelação de processos (ERP), análise de dados e automação industrial.'
-              : 'Production-ready systems spanning agentic AI, RAG architectures, business process modeling (ERP), data warehousing, and CNC automation.'}
+              ? 'Registo de sistemas desenvolvidos entre IA agêntica, modelação de processos (ERP), engenharia de dados e automação industrial.'
+              : 'Production systems spanning agentic AI, business process modeling (ERP), data engineering, and industrial automation.'}
           </p>
         </div>
 

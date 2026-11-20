@@ -262,6 +262,7 @@
 - [x] Remove UTF-8 BOM and verify zero mojibake in production bundles
 - [x] Run production build (`npm run build` -> PASS, 0 errors)
 - [x] Push to remote `main` branch and deploy to GitHub Pages (`gh-pages`)
+- [x] Remove internal Meight tasks from `PROJECTS` list (kept in `Experience` section)
 
 ---
 

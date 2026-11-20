@@ -14,28 +14,6 @@ export interface ProjectItem {
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: 'meight-rag',
-    title: 'Pesquisa híbrida e embeddings vetoriais (Meight)',
-    descriptionPt: 'Análise e otimização do fluxo de recuperação de informação técnica com pgvector, combinando pesquisa semântica densa e esparsa para respostas precisas de LLM.',
-    descriptionEn: 'Evaluated and improved technical information retrieval architecture using pgvector, fusing dense and sparse search for deterministic LLM grounding.',
-    tech: 'Python, PostgreSQL, pgvector',
-    period: '2026',
-    links: [
-      { labelPt: 'Repositório GitHub', labelEn: 'GitHub Profile', url: 'https://github.com/danielsilvaengpt' }
-    ],
-  },
-  {
-    id: 'meight-onboarding',
-    title: 'Ferramenta de onboarding operacional de clientes',
-    descriptionPt: 'Ferramenta interna criada para automatizar a configuração, estruturação e sincronização de dados de novos clientes, reduzindo tempo de entrada na plataforma.',
-    descriptionEn: 'Internal tooling developed to automate configuration, data ingestion, and pipeline mapping for new customer accounts.',
-    tech: 'Python, Automação, APIs',
-    period: '2026',
-    links: [
-      { labelPt: 'GitHub', labelEn: 'GitHub', url: 'https://github.com/danielsilvaengpt' }
-    ],
-  },
-  {
     id: 'mise-recipe-agents',
     title: 'Mise — Receitas com IA & Brigada Agêntica',
     descriptionPt: 'Sistema multi-agente que gera receitas a partir da despensa real do utilizador, calculando com rigor os ingredientes em falta. Desenvolvido com metodologia CDD (Context-Driven Development).',
