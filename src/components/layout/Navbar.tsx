@@ -9,54 +9,49 @@ export const Navbar: React.FC = () => {
     { href: '#projetos', labelPt: 'Projetos', labelEn: 'Projects' },
     { href: '#experiencia', labelPt: 'Experiência', labelEn: 'Experience' },
     { href: '#competencias', labelPt: 'Competências', labelEn: 'Skills' },
-    { href: '#aprender', labelPt: 'A aprender', labelEn: 'Learning' },
+    { href: '#aprender', labelPt: 'Aprender', labelEn: 'Learning' },
     { href: '#contacto', labelPt: 'Contacto', labelEn: 'Contact' },
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-paper border-b border-rule">
-      {/* Skip to main content accessibility link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-process focus:text-white focus:outline-none"
-      >
-        {lang === 'pt' ? 'Saltar para o conteúdo principal' : 'Skip to main content'}
-      </a>
-
+    <header className="sticky top-0 z-50 bg-dark-base/75 backdrop-blur-xl border-b border-border-subtle">
       <div className="max-w-content mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
-        {/* Name in IBM Plex Sans Condensed 600, no monogram, no logo */}
-        <a
-          href="#"
-          className="font-condensed font-semibold text-xl tracking-tight text-ink hover:text-process transition-colors duration-standard"
-        >
-          Daniel Silva
+        {/* Brand / Logo */}
+        <a href="#" className="flex items-center gap-2.5 group">
+          <span className="w-2 h-2 rounded-full bg-brand-primary group-hover:scale-125 transition-transform duration-200" />
+          <span className="font-semibold text-base tracking-tight text-text-primary group-hover:text-brand-accent transition-colors">
+            Daniel Silva
+          </span>
+          <span className="hidden sm:inline-block font-mono text-[11px] px-2 py-0.5 rounded border border-border-subtle bg-dark-surface text-text-tertiary">
+            v2.6
+          </span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 text-base" aria-label="Navegação principal">
+        <nav className="hidden md:flex items-center gap-7 text-sm" aria-label="Navegação principal">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-ink hover:text-process text-sm transition-colors duration-standard font-medium"
+              className="text-text-secondary hover:text-text-primary transition-colors font-medium text-[13px]"
             >
               {lang === 'pt' ? link.labelPt : link.labelEn}
             </a>
           ))}
 
           {/* Language Toggle */}
-          <div className="flex items-center border-l border-rule pl-6 text-sm font-mono">
+          <div className="flex items-center border-l border-border-subtle pl-6 text-xs font-mono">
             <button
               onClick={() => setLang('pt')}
-              className={`px-1.5 py-0.5 ${lang === 'pt' ? 'font-semibold text-ink underline decoration-process decoration-2' : 'text-ink-muted hover:text-ink'}`}
+              className={`px-1.5 py-0.5 rounded ${lang === 'pt' ? 'font-bold text-white bg-dark-elevated' : 'text-text-tertiary hover:text-text-secondary'}`}
               aria-label="Versão em Português"
             >
               PT
             </button>
-            <span className="text-rule mx-1">|</span>
+            <span className="text-border-subtle mx-1">/</span>
             <button
               onClick={() => setLang('en')}
-              className={`px-1.5 py-0.5 ${lang === 'en' ? 'font-semibold text-ink underline decoration-process decoration-2' : 'text-ink-muted hover:text-ink'}`}
+              className={`px-1.5 py-0.5 rounded ${lang === 'en' ? 'font-bold text-white bg-dark-elevated' : 'text-text-tertiary hover:text-text-secondary'}`}
               aria-label="English version"
             >
               EN
@@ -64,19 +59,19 @@ export const Navbar: React.FC = () => {
           </div>
         </nav>
 
-        {/* Mobile controls */}
-        <div className="flex items-center md:hidden gap-4">
+        {/* Mobile menu trigger */}
+        <div className="flex items-center md:hidden gap-3">
           <div className="flex items-center text-xs font-mono">
             <button
               onClick={() => setLang('pt')}
-              className={lang === 'pt' ? 'font-bold text-ink underline' : 'text-ink-muted'}
+              className={lang === 'pt' ? 'font-bold text-white' : 'text-text-tertiary'}
             >
               PT
             </button>
-            <span className="text-rule mx-1">|</span>
+            <span className="text-border-subtle mx-1">/</span>
             <button
               onClick={() => setLang('en')}
-              className={lang === 'en' ? 'font-bold text-ink underline' : 'text-ink-muted'}
+              className={lang === 'en' ? 'font-bold text-white' : 'text-text-tertiary'}
             >
               EN
             </button>
@@ -84,24 +79,23 @@ export const Navbar: React.FC = () => {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-ink border border-rule text-xs font-mono"
+            className="p-1.5 rounded border border-border-subtle text-text-secondary text-xs font-mono"
             aria-expanded={mobileMenuOpen}
-            aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
-            {mobileMenuOpen ? (lang === 'pt' ? 'Fechar' : 'Close') : 'Menu'}
+            {mobileMenuOpen ? '✕' : '☰'}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer (Clean list, no decorative hamburger animation) */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <nav className="md:hidden border-t border-rule bg-paper px-6 py-4 flex flex-col gap-3" aria-label="Navegação móvel">
+        <nav className="md:hidden border-t border-border-subtle bg-dark-surface/95 px-6 py-4 flex flex-col gap-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-ink hover:text-process text-base py-1"
+              className="text-text-secondary hover:text-white text-sm py-1.5"
             >
               {lang === 'pt' ? link.labelPt : link.labelEn}
             </a>

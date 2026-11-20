@@ -9,33 +9,42 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: 'var(--paper)',
-        surface: 'var(--surface)',
-        wash: 'var(--wash)',
-        ink: {
-          DEFAULT: 'var(--ink)',
-          muted: 'var(--ink-muted)',
+        dark: {
+          base: 'var(--bg-base)',
+          surface: 'var(--bg-surface)',
+          elevated: 'var(--bg-elevated)',
+          wash: 'var(--bg-wash)',
         },
-        rule: 'var(--rule)',
-        process: 'var(--process)',
-        decision: 'var(--decision)',
-        start: 'var(--start)',
-        end: 'var(--end)',
+        border: {
+          subtle: 'var(--border-subtle)',
+          hover: 'var(--border-hover)',
+          accent: 'var(--border-accent)',
+        },
+        text: {
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          tertiary: 'var(--text-tertiary)',
+        },
+        brand: {
+          primary: 'var(--brand-primary)',
+          glow: 'var(--brand-glow)',
+          accent: 'var(--brand-accent)',
+        },
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        condensed: ['"IBM Plex Sans Condensed"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'monospace'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
       maxWidth: {
-        content: '1120px',
+        content: '1160px',
         prose: '68ch',
       },
-      borderRadius: {
-        node: '6px',
+      boxShadow: {
+        glow: '0 0 50px -10px rgba(59, 130, 246, 0.25)',
+        card: '0 4px 20px -2px rgba(0, 0, 0, 0.5)',
       },
-      transitionDuration: {
-        standard: '150ms',
+      borderRadius: {
+        card: '12px',
       }
     },
   },

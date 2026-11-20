@@ -1,8 +1,9 @@
-@import '@fontsource/ibm-plex-sans/400.css';
-@import '@fontsource/ibm-plex-sans/500.css';
-@import '@fontsource/ibm-plex-sans/600.css';
-@import '@fontsource/ibm-plex-sans-condensed/600.css';
-@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
 
 @tailwind base;
 @tailwind components;
@@ -10,83 +11,68 @@
 
 @layer base {
   :root {
-    /* 4.1 Paleta — modo claro (por defeito) */
-    --paper: #F4F6F8;
-    --surface: #FFFFFF;
-    --wash: #E4EBF4;
-    --ink: #17233A;
-    --ink-muted: #4A5668;
-    --rule: #C9D1DA;
-    --process: #1B5FA6;
-    --decision: #F2C94C;
-    --start: #2F7A4B;
-    --end: #A83A32;
-  }
+    /* Dark Enterprise / Linear Studio Palette */
+    --bg-base: #0B0F17;
+    --bg-surface: #111827;
+    --bg-elevated: #1F2937;
+    --bg-wash: rgba(31, 41, 55, 0.4);
 
-  /* 4.2 Paleta — modo escuro (adaptativo) */
-  @media (prefers-color-scheme: dark) {
-    :root:not(.light-theme) {
-      --paper: #0F1829;
-      --surface: #16213A;
-      --wash: #1D2B4A;
-      --ink: #E3E9F0;
-      --ink-muted: #9AA9BC;
-      --rule: #2B3A57;
-      --process: #7DB2EE;
-      --decision: #E2B53F;
-    }
-  }
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.2);
+    --border-accent: rgba(59, 130, 246, 0.4);
 
-  :root.dark-theme {
-    --paper: #0F1829;
-    --surface: #16213A;
-    --wash: #1D2B4A;
-    --ink: #E3E9F0;
-    --ink-muted: #9AA9BC;
-    --rule: #2B3A57;
-    --process: #7DB2EE;
-    --decision: #E2B53F;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --text-tertiary: #6B7280;
+
+    --brand-primary: #3B82F6;
+    --brand-glow: rgba(59, 130, 246, 0.25);
+    --brand-accent: #60A5FA;
+    --emerald-pulse: #10B981;
+    --amber-pulse: #F59E0B;
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: var(--paper);
-    color: var(--ink);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
   }
 
   body {
     margin: 0;
-    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--paper);
-    color: var(--ink);
-    font-size: 18px;
-    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 
-  /* Tabular numbers for tables, metrics and dates */
-  .tabular-nums {
-    font-variant-numeric: tabular-nums;
+  /* Subtle noise/grid texture overlay */
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   }
 
-  /* Accessible focus rings */
+  /* Smooth custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0F17;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1F2937;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+  }
+
   :focus-visible {
-    outline: 2px solid var(--process);
+    outline: 2px solid var(--brand-primary);
     outline-offset: 3px;
-  }
-
-  /* Visually hidden screen reader utility */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
   }
 }

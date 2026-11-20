@@ -1,64 +1,87 @@
 import React from 'react'
 import { useI18n } from '../../hooks/useI18n'
-import { SectionProcessNode } from '../ui/SectionProcessNode'
+import { SpotlightCard } from '../ui/SpotlightCard'
 
 export const Skills: React.FC = () => {
   const { lang } = useI18n()
 
-  const skillGroups = [
+  const skillCategories = [
     {
-      groupPt: 'Dados e IA',
-      groupEn: 'Data & AI',
-      items: 'Python, SQL, PostgreSQL, pgvector, embeddings, pesquisa híbrida, RAG, pipelines ETL',
+      id: 'data-ai',
+      titlePt: 'IA & Engenharia de Dados',
+      titleEn: 'AI & Data Engineering',
+      badge: 'CORE DOMAIN',
+      skills: ['Python', 'SQL', 'PostgreSQL', 'pgvector', 'RAG Architectures', 'Embeddings', 'ETL Pipelines', 'Power BI'],
     },
     {
-      groupPt: 'Sistemas e Processos',
-      groupEn: 'Systems & Processes',
-      items: 'BPMN, OML, modelação de processos organizacionais, conceitos e fundações de ERP',
+      id: 'erp-is',
+      titlePt: 'Sistemas & Processos (ERP)',
+      titleEn: 'Systems & Processes (ERP)',
+      badge: 'ARCHITECTURE',
+      skills: ['BPMN 2.0', 'OML / UML', 'Process Modeling', 'ERP Foundations', 'Requirements Engineering', 'SAP (início de estudo)'],
     },
     {
-      groupPt: 'Backend e Web',
-      groupEn: 'Backend & Web',
-      items: 'Python (FastAPI), React, TypeScript, PHP, MySQL, SQL Server, APIs REST',
+      id: 'backend',
+      titlePt: 'Backend & Web Development',
+      titleEn: 'Backend & Web Systems',
+      badge: 'ENGINEERING',
+      skills: ['FastAPI', 'React 19', 'TypeScript', 'REST APIs', 'PHP', 'MySQL', 'Streamlit'],
     },
     {
-      groupPt: 'Ferramentas & Fluxo',
-      groupEn: 'Tools & Workflow',
-      items: 'Git, GitHub, Linux, Power BI, Streamlit',
+      id: 'tools',
+      titlePt: 'Ferramentas & Fluxo',
+      titleEn: 'DevOps & Tooling',
+      badge: 'ECOSYSTEM',
+      skills: ['Git & GitHub', 'Linux Shell', 'Docker Basics', 'CAD (Fusion 360)', 'CNC Interfaces'],
     },
   ]
 
   return (
-    <section id="competencias" className="py-16 sm:py-24 border-b border-rule">
+    <section id="competencias" className="py-20 sm:py-28 border-b border-border-subtle relative">
       <div className="max-w-content mx-auto px-6 lg:px-12">
-        {/* Section Process Node: Data Registry */}
-        <SectionProcessNode
-          type="data"
-          tag="04 // DATA"
-          label={lang === 'pt' ? 'PARÂMETROS TÉCNICOS' : 'TECHNICAL PARAMETERS'}
-        />
-
-        <div className="max-w-prose mb-10">
-          <h2 className="font-condensed font-semibold text-3xl sm:text-4xl text-ink tracking-tight mb-2">
-            {lang === 'pt' ? 'Competências' : 'Skills'}
+        <div className="max-w-prose mb-12">
+          <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-accent mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
+            <span>03 // PROFICIENCIES</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
+            {lang === 'pt' ? 'Competências Técnicas' : 'Technical Proficiencies'}
           </h2>
-          <p className="text-base text-ink-muted leading-relaxed">
+          <p className="text-base text-text-secondary leading-relaxed">
             {lang === 'pt'
-              ? 'Agrupadas pelo que faço e utilizo na construção de sistemas, sem gráficos de percentagem arbitrários.'
-              : 'Organized by practical capabilities applied in engineering systems, free of arbitrary percentage bars.'}
+              ? 'Competências práticas aplicadas na construção de sistemas robustos, sem barras arbitrárias de percentagem.'
+              : 'Grounded engineering proficiencies applied in mission-critical applications, free of arbitrary progress bars.'}
           </p>
         </div>
 
-        <div className="border-t border-rule divide-y divide-rule font-sans">
-          {skillGroups.map((group, idx) => (
-            <div key={idx} className="py-5 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 items-baseline hover:bg-wash/50 transition-colors duration-standard px-3 -mx-3">
-              <div className="md:col-span-4 font-semibold text-ink text-base">
-                {lang === 'pt' ? group.groupPt : group.groupEn}
+        {/* 4 Cards Grid with Specular Hover */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((cat) => (
+            <SpotlightCard key={cat.id} className="p-6 sm:p-7 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-4 font-mono text-xs">
+                  <span className="text-brand-accent font-semibold tracking-wider">
+                    {cat.badge}
+                  </span>
+                  <span className="w-2 h-2 rounded-full bg-blue-500/40" />
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
+                  {lang === 'pt' ? cat.titlePt : cat.titleEn}
+                </h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="font-mono text-xs px-2.5 py-1 rounded bg-dark-elevated/70 border border-border-subtle text-text-primary hover:border-brand-accent hover:text-white transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="md:col-span-8 text-ink-muted text-base leading-relaxed">
-                {group.items}
-              </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

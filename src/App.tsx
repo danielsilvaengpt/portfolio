@@ -7,38 +7,40 @@ import { Skills } from './components/sections/Skills'
 import { Learning } from './components/sections/Learning'
 import { Contact } from './components/sections/Contact'
 import { Footer } from './components/layout/Footer'
-import { ProcessSpine } from './components/ui/ProcessSpine'
+import { AmbientGlow } from './components/ui/AmbientGlow'
 
 function PortfolioContent() {
   return (
-    <div className="min-h-screen bg-paper text-ink selection:bg-wash selection:text-ink relative">
-      {/* Interactive Process Pipeline Spine connecting Header to Footer */}
-      <ProcessSpine />
+    <div className="min-h-screen bg-dark-base text-text-primary selection:bg-brand-primary selection:text-white relative">
+      {/* Volumetric Studio Ambient Glow & Blueprint Grid */}
+      <AmbientGlow />
 
-      <Navbar />
+      <div className="relative z-10">
+        <Navbar />
 
-      <main id="main-content" role="main" className="relative z-10">
-        {/* 1. Hero with interactive BPMN architecture diagram */}
-        <Hero />
+        <main id="main-content" role="main">
+          {/* 1. Hero with BPMN Diagram */}
+          <Hero />
 
-        {/* 2. Projects (Records / Data tables) */}
-        <Projects />
+          {/* 2. Projects (Specular Spotlight Cards) */}
+          <Projects />
 
-        {/* 3. Experience and Education */}
-        <Experience />
+          {/* 3. Experience & Education Timeline */}
+          <Experience />
 
-        {/* 4. Skills (Grouped by practical capabilities) */}
-        <Skills />
+          {/* 4. Skills (Domain Grid) */}
+          <Skills />
 
-        {/* 5. Currently Learning (Transparent roadmap) */}
-        <Learning />
+          {/* 5. Currently Learning (Roadmap) */}
+          <Learning />
 
-        {/* 6. Contact */}
-        <Contact />
-      </main>
+          {/* 6. Contact */}
+          <Contact />
+        </main>
 
-      {/* 7. Semantic Footer */}
-      <Footer />
+        {/* 7. Footer */}
+        <Footer />
+      </div>
     </div>
   )
 }

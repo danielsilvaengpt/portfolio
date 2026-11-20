@@ -251,6 +251,20 @@
 
 ---
 
+## Phase 18 — Direção A: Dark Enterprise Luxury / Linear Studio
+
+- [x] Configure Dark Enterprise tokens in `tailwind.config.ts` and `globals.css` (`#0B0F17` base, `#111827` surface, `#3B82F6` primary blue)
+- [x] Create `SpotlightCard` with dynamic mouse specular radial highlight
+- [x] Create `AmbientGlow` with volumetric gradient mesh and micro-grid pattern
+- [x] Re-skin `BpmnDiagram` for dark enterprise aesthetics with interactive nodes and telemetry footer
+- [x] Modernize Hero with massive typography, status pill, and clear factual title ("Engenheiro Informático Júnior — IA, Sistemas de Informação & SAP")
+- [x] Transform Projects, Experience, Skills, and Learning into specular spotlight grids
+- [x] Remove UTF-8 BOM and verify zero mojibake in production bundles
+- [x] Run production build (`npm run build` -> PASS, 0 errors)
+- [x] Push to remote `main` branch and deploy to GitHub Pages (`gh-pages`)
+
+---
+
 ## Backlog (Nice to Have — Post-MVP)
 
 - [ ] Blog section (static MDX posts)

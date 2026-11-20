@@ -7,6 +7,30 @@
 
 ## Changelog
 
+### [2026-11-20 15:33] — DIREÇÃO A: DARK ENTERPRISE LUXURY / LINEAR STUDIO & ENCODING VERIFICATION
+
+**Action:** Transição completa para o estilo **Direção A ("Dark Enterprise Luxury / Linear Studio")** e validação cirúrgica de encoding UTF-8 sem mojibake:
+1. **Identidade Visual Dark Enterprise:**
+   - Paleta obsidiana profunda: `--bg-base: #0B0F17`, `--bg-surface: #111827`, `--bg-elevated: #1F2937`, bordas subtis `rgba(255,255,255,0.08)` e glow azul primário `--brand-primary: #3B82F6`.
+   - Malha de iluminação volumétrica ambiente (`AmbientGlow`): gradientes radiais ultra-suaves no topo e centro combinados com padrão de grelha milimétrica (`bg-grid-pattern`).
+   - Cartões com luz especular dinâmica (`SpotlightCard`): efeito de foco luminoso suave a acompanhar o cursor do rato em tempo real (60 FPS) nas secções de Projetos, Experiência, Competências e Roadmap.
+2. **Diagrama de Processo BPMN Dark Enterprise:**
+   - Re-estilização completa com caixas gradiente (`#1E293B` para `#0F172A`), losango de decisão âmbar com anel pulsante, setas SVG vetorizadas com glow azul e rodapé com telemetria técnica interativa em tempo real.
+3. **Hero & Foco Factual Impecável:**
+   - Título e subtítulo: `Engenheiro Informático Júnior — IA, Sistemas de Informação & SAP` (UTF-8 limpo, BOM removido, sem qualquer mojibake).
+   - Chip de disponibilidade: `DISPONÍVEL PARA CONTRATAÇÃO // AVEIRO, PT` com indicador verde pulsante.
+   - Botões de ação com hover glow azul e descarregamento direto de CV.
+4. **Projetos & Percurso:**
+   - Grelha responsiva de projetos com spotlight cards, tech pills em JetBrains Mono e tags de arquitetura.
+   - Secção de aprendizagem e roadmap com clarificação explícita do estado de estudo em SAP, IA Agêntica e Data Engineering.
+5. **Verificação & Deploy:**
+   - TypeScript build sem erros (`tsc -b && vite build` -> 0 errors, bundle 260KB JS / 50KB CSS).
+   - Git commit e push para o repositório remoto `main` e deploy publicado no GitHub Pages (`gh-pages`).
+
+**Status:** ✅ Complete | Build: PASS | Deploy: Live on GitHub Pages
+
+---
+
 ### [2026-11-20 15:20] — RECURRENT ANIMATION SYSTEM: CONCEPT 1 "THE LIVE PIPELINE"
 
 **Action:** Implementação do sistema de animação e estilo recorrente em todo o portfólio (Conceito 1 — "O Fio de Processo / The Live Pipeline"):
