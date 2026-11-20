@@ -7,6 +7,22 @@
 
 ## Changelog
 
+### [2026-11-20 14:45] — PIVOT: AI, INFORMATION SYSTEMS & SAP + NEW BPM REPO PROJECT
+
+**Action:** Ajustada a trajetória profissional e perfil do portfólio para posicionamento em **Inteligência Artificial, Sistemas de Informação e ERP/SAP (em aprendizagem)**, adicionando o projeto de Modelação de Processos de Negócio ligado ao GitHub.
+**Files created / modified:**
+- `src/data/projects.ts`: Adicionado projeto `Business Process Modeling` (BPMN, OML, fundações para ERP e Sistemas de Informação) com link direto para o repositório `danielsilvaengpt/Business-Process-Modeling`. Corrigido o encoding UTF-8 em todos os textos dos projetos.
+- `src/data/skills.ts`: Adicionada a nova categoria `'erp-is'` (**ERP & SISTEMAS DE INFORMAÇÃO**) contendo `BPMN (Process Modeling)`, `OML / UML`, `ERP Foundations`, `SAP (em aprendizagem)`, `Business Process Analysis`, `Requirements Engineering` e `Information Systems Design`. Categoria passa a 5 grupos especializados.
+- `src/components/sections/Skills.tsx`: Importado ícone `LayoutGrid`, mapeado para a categoria `'erp-is'` e adaptado o layout responsivo da grelha de skills para `xl:grid-cols-5`.
+- `src/components/sections/Hero.tsx`: Badge mono atualizada para `DANIEL SILVA — IA · SISTEMAS DE INFORMAÇÃO · SAP 2026`, papel atualizado para `Engenheiro Informático Júnior — IA, Sistemas de Informação & SAP` e tagline atualizada para `"Da análise ao impacto."` / `"From analysis to impact."`.
+- `src/components/sections/About.tsx`: Pull-quote e narrativa atualizadas para expressar a transição da engenharia industrial para IA, Sistemas de Informação e ERP com foco futuro na especialização em SAP.
+- `src/components/ui/ParallaxTicker.tsx`: Integrados novos termos no ticker: `ERP & SAP`, `BPMN PROCESS MODELING`, `INFORMATION SYSTEMS`, `POWER BI · ANALYTICS`.
+- `MEMORY.md` & `TASKS.md`: Documentação e changelog sincronizados com o repositório.
+
+**Status:** ✅ Complete | Build: PASS | Deploy: Published to GitHub Pages & Remote `main`
+
+---
+
 ### [2026-10-27 01:45] — CONCEPT 2: SWISS LATENT DIMENSION — Full Cinematic Upgrade
 
 **Action:** Implementada a camada cinematográfica completa "Swiss Latent Dimension" (Concept 2) em todas as secções, de ponta a ponta.

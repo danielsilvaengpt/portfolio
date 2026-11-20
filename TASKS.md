@@ -198,13 +198,24 @@
 
 ## Phase 14 — Deploy
 
-- [ ] Run `npm run build` — verify no build errors
-- [ ] Run `npm run preview` — verify production build locally
-- [ ] Set `base: '/portfolio/'` in `vite.config.ts`
-- [ ] Run `npm run deploy` → GitHub Pages
-- [ ] Verify live URL: `https://danielsilvaengpt.github.io/portfolio/`
-- [ ] Test all links (GitHub projects, LinkedIn, CV downloads, demo links)
-- [ ] Share and celebrate 🎉
+- [x] Run `npm run build` — verify no build errors
+- [x] Run `npm run preview` — verify production build locally
+- [x] Set `base: '/portfolio/'` in `vite.config.ts`
+- [x] Run `npm run deploy` → GitHub Pages
+- [x] Verify live URL: `https://danielsilvaengpt.github.io/portfolio/`
+- [x] Test all links (GitHub projects, LinkedIn, CV downloads, demo links)
+- [x] Share and celebrate 🎉
+
+---
+
+## Phase 15 — Career Alignment & Project Updates (AI, IS & SAP)
+
+- [x] Add Business Process Modeling project (`danielsilvaengpt/Business-Process-Modeling`)
+- [x] Adjust Hero role, badge, and tagline for AI + Information Systems + SAP
+- [x] Add 5th Skill Category: ERP & Sistemas de Informação (BPMN, OML, ERP, SAP learning)
+- [x] Update narrative and pull-quotes in About section
+- [x] Update Parallax Ticker keywords with ERP/SAP/BPMN
+- [x] Build, commit, and deploy updates to `main` and `gh-pages`
 
 ---
 
